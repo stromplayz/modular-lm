@@ -52,15 +52,27 @@ def download_tinystories(path: str, max_mb: float = 30.0) -> str:
     return path
 
 
-def load_story_corpus(path: str, min_words: int = 35, max_words: int = 350) -> str:
+def load_story_corpus(path: str, min_words: int = 35, max_words: int = 350,
+                      opener_every: int = 4) -> str:
+    """Load stories AND short opener fragments.
+
+    The opener fragments (first ~10 words, emitted for every `opener_every`-th
+    story) teach the Skill Router that a SHORT fluent-English prompt is a
+    story request - without them the router maps any short input to the
+    short-form skills (math/qa/count).
+    """
     text = open(path, encoding="utf-8", errors="ignore").read()
     parts = re.split(r"<\|end_of_text\|>|<|endoftext\|>|\n\s*\n", text)
     keep = []
+    n_openers = 0
     for p in parts:
         p = " ".join(p.split())
         n = len(p.split())
         if min_words <= n <= max_words:
             keep.append(p)
+            if n_openers % opener_every == 0:
+                keep.append(" ".join(p.split()[:10]))
+            n_openers += 1
     return "\n\n".join(keep) + "\n\n"
 
 # ---------------------------------------------------------------------- #
@@ -111,6 +123,19 @@ def _operand(rng: random.Random) -> int:
     return rng.randint(0, 99)
 
 
+def _add_scratchpad(a: int, b: int, ans: int) -> str:
+    """Place-value decomposition: teaches the ALGORITHM, not memorization.
+
+    23 + 45 -> '20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.'
+    Each intermediate lives in a tiny learned space (tens <= 180, ones <= 18).
+    """
+    t, u = a - a % 10, a % 10
+    t2, u2 = b - b % 10, b % 10
+    tens_sum, ones_sum = t + t2, u + u2
+    return f"{t} + {t2} = {tens_sum}. {u} + {u2} = {ones_sum}. " \
+           f"{tens_sum} + {ones_sum} = {ans}."
+
+
 def gen_math(rng: random.Random) -> str:
     op = rng.choice(["+", "-", "x"])
     if op == "x":
@@ -120,6 +145,9 @@ def gen_math(rng: random.Random) -> str:
         if op == "-" and b > a:
             a, b = b, a
     ans = a + b if op == "+" else a - b if op == "-" else a * b
+    head = rng.choice(_MATH_TEMPLATES).split("\n")[0].format(a=a, op=op, b=b, ans=ans)
+    if op == "+" and rng.random() < 0.6:
+        return f"{head}\n{_add_scratchpad(a, b, ans)}\nAnswer: {ans}"
     return rng.choice(_MATH_TEMPLATES).format(a=a, op=op, b=b, ans=ans)
 
 # ---------------------------------------------------------------------- #
