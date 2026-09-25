@@ -63,7 +63,7 @@ Checkpoint: **3.3 MB fp32** — 60x under the 200 MB budget.
 
 ---
 
-## The four skills
+## The five skills
 
 | Skill | Corpus | Source |
 |---|---|---|
@@ -71,6 +71,30 @@ Checkpoint: **3.3 MB fp32** — 60x under the 200 MB budget.
 | `qa` | factual Q -> A | bundled facts bank (`assets/facts.txt`) |
 | `math` | exact arithmetic (+, -, x) | generated on the fly (infinite) |
 | `count` | letter counting, first-letter | generated from word list |
+| `optometry` | eye-care domain facts (anatomy, refractive errors, tests, prescriptions, conditions) | bundled bank (`assets/optometry.txt`, 146 facts) |
+
+**Adding your own skill is 3 steps:** write a `question|||answer` bank (or a
+generator) in `assets/`, register the name in `SKILL_NAMES` + a template in
+`data.py`, run training. A fresh expert block is created automatically.
+
+## Download a trained model
+
+**Releases page** (no build needed): grab `model.pt` + `tokenizer.json` from
+[Releases](https://github.com/stromplayz/modular-lm/releases) and drop them in
+a `ckpt/` folder:
+
+```bash
+git clone https://github.com/stromplayz/modular-lm.git && cd modular-lm
+pip install torch numpy --index-url https://download.pytorch.org/whl/cpu
+pip install -e .
+mkdir ckpt && cd ckpt
+# download model.pt + tokenizer.json from the Releases page into here
+cd ..
+python -m skill_lm.generate --demo
+```
+
+Or get everything (code + latest checkpoint) with a plain clone - the trained
+checkpoint is committed to `ckpt/` by the training workflow.
 
 ## Quick start
 
@@ -85,6 +109,7 @@ python -m skill_lm.train --steps 4000 --out ckpt
 python -m skill_lm.generate --demo
 python -m skill_lm.generate --prompt "Compute: 12 + 34"
 python -m skill_lm.generate --prompt "Q: What is the capital of Japan?" --skill qa
+python -m skill_lm.generate --prompt "Eye Q: What does OD mean on a prescription?" --skill optometry
 ```
 
 ## Train on GitHub Actions (free compute)
@@ -99,9 +124,9 @@ training CSV as artifacts. Re-run with more steps any time.
   Want the model to get better at math? Train the math expert; the trunk and
   other skills are untouched. Want a new skill (code, translation)? Add a
   block + corpus entry; nothing else changes structurally.
-- **Round-robin training**: step `i` trains skill `i mod 4` with its expert
-  force-loaded, so every parameter in every expert gets gradient flow while
-  the router learns to tell skills apart from trunk state alone.
+- **Round-robin training**: step `i` trains skill `i mod n_skills` with its
+  expert force-loaded, so every parameter in every expert gets gradient flow
+  while the router learns to tell skills apart from trunk state alone.
 - **RoPE + RMSNorm + pre-norm residuals** — modern small-model hygiene,
   depth-scaled residual init, gradient clipping, cosine LR with warmup.
 
@@ -111,14 +136,16 @@ training CSV as artifacts. Re-run with more steps any time.
 skill_lm/
   tokenizer.py   from-scratch byte-level BPE (GPT-2 style pre-tokenization)
   model.py       SkillModularLM: trunk + router + skill experts + generate
-  data.py        skill corpora: TinyStories download, facts bank, generators
+  data.py        skill corpora: TinyStories download, facts banks, generators
   train.py       round-robin skill training, per-skill eval, sample writing
   generate.py    chat CLI with router visibility
-assets/facts.txt QA facts bank
+  benchmark.py   per-skill exact-match benchmark CLI
+assets/facts.txt      general QA facts bank
+assets/optometry.txt  optometry facts bank (146 facts)
 tests/           tokenizer, model, data, overfit tests
 ```
 
-## Measured results (checkpoint @ 6000 steps, 821K params)
+## Measured results (v0.1.0 release, 4 skills @ 6000 steps, 821K params)
 
 Exact-match benchmarks on fresh, unseen prompts (`python -m skill_lm.benchmark`):
 
