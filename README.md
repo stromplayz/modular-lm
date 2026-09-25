@@ -145,16 +145,17 @@ assets/optometry.txt  optometry facts bank (146 facts)
 tests/           tokenizer, model, data, overfit tests
 ```
 
-## Measured results (v0.1.0 release, 4 skills @ 6000 steps, 821K params)
+## Measured results (v0.2.0 release, 5 skills @ 6000 steps, 936K params)
 
 Exact-match benchmarks on fresh, unseen prompts (`python -m skill_lm.benchmark`):
 
 | Skill | Accuracy | Notes |
 |---|---|---|
-| `math` | **97.3%** | addition 98%, subtraction 93%, multiplication **100%** |
-| `qa`   | **100%**  | all 111 facts in the bank answered exactly (capitals, science, days/months) |
+| `optometry` | **97.3%** | 142/146 eye-care facts: anatomy, refractive errors, conditions, tests, prescriptions |
+| `math` | 90.7% | addition 90%, subtraction 80%, multiplication **100%** (v0.1.0 4-skill model scored 97.3% - the 5th expert trades a few points) |
+| `qa`   | **99.1%**  | capitals, science, days/months |
 | `count`| **100%**  | all 89 words: letter counts + first letters |
-| `router`| ~97% on natural prompts | loads the right expert; one 7-token stock prefix ("One day, a little girl named") can still lean math |
+| `router`| loads the right expert | eye questions with the **Eye Q: / Eye exam Q:** lead-in route to the optometry expert; plain `What is X?` between the two Q&A skills may lean qa - force with `--skill optometry` if needed |
 
 The router's live confidence is printed with every demo generation
 (`ROUTER : math [router correct] (probs: math=0.97, ...)`) and the benchmark
@@ -171,7 +172,7 @@ tool prints per-operation breakdowns.
 ## Status
 
 - [x] From-scratch BPE tokenizer
-- [x] Skill-Modular Transformer (trunk + 4 skill experts + router)
+- [x] Skill-Modular Transformer (trunk + 5 skill experts + router)
 - [x] Skill datasets + generators
 - [x] Training pipeline with per-skill eval + router accuracy
 - [x] Test suite (tokenizer round-trip, routing, dispatch, overfit)
