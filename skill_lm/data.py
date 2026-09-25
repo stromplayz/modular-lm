@@ -100,12 +100,23 @@ _MATH_TEMPLATES = [
 ]
 
 
+def _operand(rng: random.Random) -> int:
+    """Curriculum: small operands dominate so (a, b) pairs get many exposures;
+    a long tail keeps coverage of the full 0..99 range."""
+    r = rng.random()
+    if r < 0.50:
+        return rng.randint(0, 12)
+    if r < 0.80:
+        return rng.randint(0, 29)
+    return rng.randint(0, 99)
+
+
 def gen_math(rng: random.Random) -> str:
     op = rng.choice(["+", "-", "x"])
     if op == "x":
         a, b = rng.randint(2, 12), rng.randint(2, 12)
     else:
-        a, b = rng.randint(0, 99), rng.randint(0, 99)
+        a, b = _operand(rng), _operand(rng)
         if op == "-" and b > a:
             a, b = b, a
     ans = a + b if op == "+" else a - b if op == "-" else a * b

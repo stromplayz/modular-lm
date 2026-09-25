@@ -28,6 +28,25 @@ def test_math_subtraction_non_negative():
             assert int(m.group(1)) >= int(m.group(2))
 
 
+def test_math_operand_curriculum():
+    """Small operands must dominate: curriculum gives them many more exposures."""
+    import random
+    rng = random.Random(3)
+    small = mid = big = 0
+    for _ in range(2000):
+        r = random.Random(rng.random())
+        a = D._operand(r)
+        assert 0 <= a <= 99
+        if a <= 12:
+            small += 1
+        elif a <= 29:
+            mid += 1
+        else:
+            big += 1
+    assert small > mid > big, (small, mid, big)
+    assert small > 2000 * 0.4  # ~50% expected
+
+
 def test_count_examples_parse():
     import random
     rng = random.Random(2)
