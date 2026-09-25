@@ -41,13 +41,14 @@ def run_one(model, tok, prompt, skill, tokens, temperature, top_k, greedy):
     with torch.no_grad():
         h = model._trunk(ids)
         probs = torch.softmax(model.router(h.mean(dim=1)), dim=-1)[0]
+        auto_pick = int(probs.argmax())          # what the ROUTER would load
         out, chosen = model.generate(
             ids, max_new_tokens=tokens, temperature=temperature, top_k=top_k,
             skill=sk if isinstance(sk, int) else "auto", greedy=greedy,
         )
     text = tok.decode(out[0].tolist())
     probs_s = ", ".join(f"{D.SKILL_NAMES[i]}={probs[i]:.2f}" for i in probs.argsort(descending=True))
-    return text, D.SKILL_NAMES[chosen], probs_s
+    return text, D.SKILL_NAMES[auto_pick], probs_s
 
 
 def main(argv=None) -> None:
