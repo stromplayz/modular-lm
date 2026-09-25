@@ -1,0 +1,1081 @@
+--- samples @ 14:52:35 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named there was he had mom. She day and saming that the fref it. " was a bpls, it and the time. She was a dow. They day. The he had wamed and
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Twes.
+
+Q: What is the sun?
+Answer: What do we use of Pars?
+Answer: Oy.
+
+What is a larpl of Ear?
+A: What is
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 89
+
+Compute: 14 + ?
+Answer: 97
+
+Compute: 7 + 11
+Answer: 84
+
+What is 6 x 5?
+Answer: 0
+
+What is 10 + 11?
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'mk'?
+Answer: 6
+
+Count the first letter of 'pinge'?
+Answer: o
+
+Count the letters are in the word 'pen the word '
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+
+Q question: What is the biit.
+
+Q: The eye distance?
+Answer: What is the sphere a prescription?
+Optometry question: ndyt far doria. Stm
+
+--- samples @ 14:55:10 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily. The little girl was a big store. He was soked the done and the stot." Sowy. She wanted to the slatch the sid to he was a big tipped.
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Rome.
+
+Question: What do hearmers grow in a bear sides?
+Answer: A parbow.
+
+Question: What do you call gugal?
+Answer
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+12 x 10 = ?
+Answer: 22
+
+5 - 7 = ?
+Answer: 76
+
+What is 7 + 9?
+Answer: 92
+
+Compute: 10 - 2
+Answer: 2
+
+Compute
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 6
+
+Count the letters in 'dion'.
+Answer: 4
+
+Count the letters in 'wizard'.
+Answer: 6
+
+How many letters are in the word 'window'?
+Answer
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: The type of the badetor.
+
+Optometry question: Which disten the macheren the eye of the eye exam?
+Answer: The opticis.
+
+Optometry question:
+
+--- samples @ 14:57:44 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily. He said, "No. Her mom try is so excited. He wanted to help. They put the do. The boy said, "That's mommy had to gave. They put it for a rain
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is the capital of Norway?
+Answer: Osis.
+
+What is the sun in the sky at natural material?
+Answer: Damonday
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 20 = 80. 5 + 5 = 2. 10 + 14 = 13.
+Answer: 14
+
+8 x 3 = ?
+Answer: 41
+
+Compute: 7 + 11
+10 + 0 = 10.
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+What is the first letter of 'dog'?
+Answer: g
+
+What is the first letter of 'dinner'?
+Answer: m
+
+Count the letters in 'mountain'.
+
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Ege related macular degeneration.
+
+Eye exam Q: What dropeion side visual acuid glasses distances?
+Answer: A
+
+--- samples @ 15:00:18 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily. He had always secreling. The man was a big. He sing, she had a big budies and soft of the water. She looked at her mom. One day, she had a
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What is the capital of Mexico?
+A: Mexico City.
+
+What is the capital of India?
+Answer: Ne
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 14
+
+What is 3 x 3?
+Answer: 65
+
+What is 11 - 2?
+Answer: 12
+
+What is 11 x 3?
+Answer: 46
+
+What is 3 x 3
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'ball'?
+Answer: 4
+
+How many letters are in the word 'mountain'?
+Answer: 8
+
+Count the letters in 'game'.
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Q: What test measures how the cornea resists pressure?
+A: Pachymetes.
+
+Optometry question: What lens curve V differ
+
+--- samples @ 15:02:52 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Timmy. Tom loved to find the park, and the green. "Dom, me man!" So, you can help!" Max said, "Let's mom, watch. I war you can you
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of Egypt?
+Answer: Cairo.
+
+Q: What is the capital of Norway?
+A: Oslo.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 0 = 30. 2 + 8 = 12. 30 + 12 = 42.
+Answer: 44
+
+What is 1 + 8?
+Answer: 0
+
+Compute: 3 + 8
+0 + 0 =
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'window'?
+Answer: 6
+
+How many letters are in the word 'bird'?
+Answer: 4
+
+How many letters are in the word '
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Q: What is a white pupil reflex in a baby photo a warning of?
+A: Retinoblastom
+
+--- samples @ 15:05:26 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily. She was very very happy. The bird was very loud and was very very happy and ready. Her mom said, "Hello, my mess. I can you." Lily's mommy said, "
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of Turkey?
+Answer: Ankara.
+
+Question: What is the capital of Australia?
+Answer: Canber
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 32
+
+Compute: 23 - 0
+Answer: 17
+
+Compute: 5 - 5
+Answer: 3
+
+What is 3 x 11?
+Answer: 33
+
+What is 8 x 3?
+Answer
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'flower'.
+Answer: 6
+
+How many letters are in the word 'chicken'?
+Answer: 7
+
+Count the letters in 'farmer'.
+
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye exam Q: What is the treatment for a cataract?
+Answer: Lens extraction surgery.
+
+Eye Q: What is a wh
+
+--- samples @ 15:08:01 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily's mom went to the park with her friends. She saw a big botoy in the park and the park. She went up and ran to the park and played together. They were very excited to have the pain
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What gas do humans breathe out?
+A: Carbon dioxide.
+
+Question: What is the capital of England?
+Answer: Lond
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 50 = 50. 3 + 4 = 8. 50 + 8 = 68.
+Answer: 68
+
+Compute: 12 - 12
+Answer: 4
+
+Compute: 8 + 10
+0 + 10 = 10
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'butterfly'?
+Answer: 9
+
+Count the letters in 'banana'.
+Answer: 6
+
+How many letters are in the word '
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye exam Q: What is a white pupil reflex in a baby photo a warning of?
+Answer: Retinobl
+
+--- samples @ 15:10:35 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Max said, "I'm I'm still, I'm just don't find. I will be must drorite," Ben asked. "I know't like a b
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What animal says woof?
+Answer: A dog.
+
+Question: What is a very big body of salt water?
+Answer: An ocean.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 0 = 30. 3 + 4 = 9. 30 + 9 = 39.
+Answer: 39
+
+Compute: 9 x 10
+Answer: 90
+
+Compute: 12 x 2
+Answer: 24
+
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'winter'?
+Answer: 6
+
+Count the letters in 'winter'.
+Answer: 6
+
+Count the letters in 'night'.
+Answer: 5
+
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye exam Q: What lens coating blocks glare from water and roads?
+Answer: Polarization.
+
+Q: What is the n
+
+--- samples @ 15:13:09 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Max's amazing, she said, "I won't know! I want to go in her. I'm slide! Now it's friend's me." Bob was so happy
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+How many legs does a dog have?
+Answer: Four.
+
+Question: What shape has three sides?
+Answer: A triangle.
+
+Q: What
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 4 = 5. 60 + 5 = 55.
+Answer: 55
+
+What is 15 - 11?
+Answer: 10
+
+Compute: 6 + 4
+0 + 0 =
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'dolphin'.
+Answer: 7
+
+What is the first letter of 'morning'?
+Answer: m
+
+How many letters are in the word 'ro
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Optometry question: What is the abbreviation for age related macular degeneration?
+Answer: AMD.
+
+Eye exam Q:
+
+--- samples @ 15:15:45 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 7?
+0 + 80 = 80. 7 + 9 = 16. 80 + 16 = 96.
+Answer: 96
+
+9 x 5 = ?
+Answer: 45
+
+8 + 9 = ?
+0
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of Mexico?
+Answer: Mexico City.
+
+Q: What is the capital of Japan?
+A
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 40
+
+Compute: 3 x 11
+Answer: 33
+
+Compute: 1 + 65
+0 + 60 = 60. 1 + 6 = 7. 60 + 7 = 67.
+Answer: 67
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'green'.
+Answer: 5
+
+How many letters are in the word 'sun'?
+Answer: 3
+
+How many letters are in the word 'smile
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye Q: What is the normal range of intraocular pressure?
+A: 10 to 21 mmHg.
+
+Eye Q: What is the common name
+
+--- samples @ 15:18:21 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily went outside. She was so excited! She was very excited! She asked her mommy and gave her mommy. She said, "Yes, don't want to play with you." Her mom said, "T
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is the capital of China?
+Answer: Beijing.
+
+Q: What is a young cat called?
+A: A kitten.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+10 + 40 = 50. 3 + 4 = 7. 50 + 7 = 57.
+Answer: 57
+
+Compute: 95 + 9
+90 + 0 = 90. 5 + 9 = 14. 90 +
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'whisper'?
+Answer: 7
+
+How many letters are in the word 'morning'?
+Answer: 7
+
+What is the first letter of
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye exam Q: What is the inflammation of the eyelid margins called?
+Answer: Blepharitis.
+
+Q: What
+
+--- samples @ 15:20:56 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 7?
+0 + 0 = 0. 6 + 7 = 13. 0 + 13 = 13.
+Answer: 13
+
+What is 3 x 6?
+Answer: 18
+
+Compute: 3 x 4
+Answer: 12
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What is the capital of Norway?
+A: Oslo.
+
+Q: What is the capital of Japan?
+A: Tokyo.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+7 x 3 = ?
+Answer: 21
+
+Compute: 8 x 4
+Answer: 32
+
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'moon'?
+Answer: 4
+
+Count the letters in 'dragon'.
+Answer: 6
+
+What is the first letter of 'bu
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Q: What is the common name for strabismus?
+A: Crossed eyes.
+
+Q: What lens curve corrects astig
+
+--- samples @ 15:23:30 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily came to the park. She was so happy to help her mommy, but she was so happy. Her mommy said to her mommy. Her mom said, "I love you, but be careful and the cook
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of Australia?
+Answer: Canberra.
+
+Q: What do we use to hear?
+A: Ears.
+
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+Compute: 12 - 1
+Answer: 11
+
+What is 9 - 2?
+Answer: 9
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'dinner'?
+Answer: 6
+
+How many letters are in the word 'student'?
+Answer: 7
+
+Count the letters in 'dol
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye Q: Which cranial nerve controls most eye movement?
+A: The third cranial nerve.
+
+Eye exam
+
+--- samples @ 15:26:06 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 4?
+0 + 0 = 0. 6 + 4 = 10. 0 + 10 = 10.
+Answer: 10
+
+Compute: 2 x 2
+Answer: 4
+
+Compute: 11 x 12
+Answer: 132
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of India?
+Answer: New Delhi.
+
+Question: What is the closest star to Earth?
+Answer: The
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 40. 3 + 5 = 8. 40 + 8 = 48.
+Answer: 48
+
+3 x 9 = ?
+Answer: 27
+
+Compute: 7 x 9
+Answer: 63
+
+Compute
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'cheese'?
+Answer: 6
+
+How many letters are in the word 'spider'?
+Answer: 6
+
+How many letters are in
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye Q: What test measures how the cornea resists pressure?
+A: Pachymetry.
+
+Eye Q: What is the inflammation
+
+--- samples @ 15:28:41 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 66
+
+3 x 3 = ?
+Answer: 9
+
+Compute: 8 + 1
+Answer: 9
+
+Compute: 67 - 8
+Answer: 63
+
+What is 0 + 3?
+Answer:
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is the chemical symbol for gold?
+Answer: Au.
+
+What is the capital of Brazil?
+Answer: Brasilia.
+
+
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 50. 3 + 5 = 8. 50 + 8 = 58.
+Answer: 58
+
+Compute: 12 x 11
+Answer: 132
+
+What is 6 x 1?
+Answer: 16
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'whisper'.
+Answer: 7
+
+How many letters are in the word 'snow'?
+Answer: 4
+
+What is the first letter of 'cloud
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye exam Q: What machine measures refractive error automatically?
+Answer: The autorefractor.
+
+
+
+--- samples @ 15:31:16 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 0?
+0 + 0 = 0. 6 + 0 = 6. 0 + 6 = 6. 0 + 6 = 6.
+Answer: 6
+
+Compute: 11 + 1
+10 + 0 = 10. 1 + 1
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What is the capital of Turkey?
+A: Ankara.
+
+What is a group of fish called?
+Answer: A school.
+
+
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 50. 3 + 5 = 8. 50 + 8 = 58.
+Answer: 58
+
+2 - 6 = ?
+Answer: 2
+
+What is 3 x 10?
+Answer: 30
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'dragon'?
+Answer: 6
+
+How many letters are in the word 'garden'?
+Answer: 6
+
+What is the first letter of '
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye Q: What does a minus sphere correct?
+A: Myopia.
+
+Eye Q: What vision test uses letters of decreasing s
+
+--- samples @ 15:33:51 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily went to the park. She was very careful and saw the sunny dog. She had an kitchen to watch her bigger! She said, "Can I have a cup. I'm
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What is the capital of Norway?
+A: Oslo.
+
+What is a small river?
+Answer: A stream.
+
+Q: What is
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+Compute: 8 + 8
+0 + 0 = 0. 8 + 8 = 16. 0 + 16 =
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'castle'?
+Answer: 6
+
+Count the letters in 'summer'.
+Answer: 6
+
+How many letters are in the word 'sm
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Optometry question: What test measures a baby's vision without words?
+Answer: Preferential looking.
+
+Eye exam Q: What mic
+
+--- samples @ 15:36:24 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 8?
+Answer: 18
+
+What is 4 + 0?
+0 + 0 = 0. 4 + 0 = 4. 0 + 4 = 4.
+Answer: 4
+
+What is 3 x 11?
+Answer:
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is the capital of Egypt?
+Answer: Cairo.
+
+Q: What is the capital of Japan?
+A: Tokyo.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 50. 3 + 5 = 8. 50 + 8 = 58.
+Answer: 58
+
+What is 7 x 10?
+Answer: 70
+
+What is 4 x 9?
+Answer: 36
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+What is the first letter of 'game'?
+Answer: g
+
+How many letters are in the word 'window'?
+Answer: 6
+
+How many letters are in the word 'm
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Q: What is the small central pit of sharpest vision called?
+A: The fovea.
+
+Q: What drop dilat
+
+--- samples @ 15:38:59 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 46
+
+What is 5 x 7?
+Answer: 35
+
+What is 5 x 12?
+Answer: 60
+
+Compute: 11 + 12
+10 + 10 = 20. 1 + 2 = 3. 20 +
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of Germany?
+Answer: Berlin.
+
+Where do fish live?
+Answer: In water.
+
+Question:
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 70. 3 + 4 = 7. 70 + 7 = 77.
+Answer: 77
+
+Compute: 6 x 10
+Answer: 60
+
+Compute: 5 + 94
+Answer: 57
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+What is the first letter of 'smile'?
+Answer: s
+
+What is the first letter of 'game'?
+Answer: g
+
+How many letters are in the word 'river
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Optometry question: What does the first number in 20/40 mean?
+Answer: The testing distance in feet.
+
+Eye exam Q: What lens coating b
+
+--- samples @ 15:41:35 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 6 = ?
+10 + 0 = 10. 2 + 6 = 8. 10 + 8 = 18.
+Answer: 18
+
+8 + 3 = ?
+Answer: 11
+
+Compute: 5 x 9
+Answer: 4
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+How many colors are in a rainbow?
+Answer: Seven.
+
+What is the capital of Greece?
+Answer: Athens.
+
+What do
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 98
+
+Compute: 5 x 9
+Answer: 45
+
+Compute: 74 - 3
+Answer: 73
+
+Compute: 5 + 5
+0 + 0 = 0. 5 + 5 = 10
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'summer'.
+Answer: 6
+
+How many letters are in the word 'monkey'?
+Answer: 6
+
+How many letters are in the word 'spr
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Eye Q: What does a plus sphere correct?
+A: Hyperopia.
+
+Eye exam Q: What is the medical name for color blindness
+
+--- samples @ 15:44:10 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 2
+
+Compute: 7 + 8
+Answer: 15
+
+4 x 2 = ?
+Answer: 8
+
+Compute: 26 - 1
+Answer: 25
+
+What is 9 - 3?
+Answer: 6
+
+
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What shape has four equal sides?
+Answer: A square.
+
+Q: What is the capital of Norway?
+A: Oslo
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+What is 11 x 9?
+Answer: 99
+
+25 - 4 = ?
+Answer:
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'window'?
+Answer: 6
+
+What is the first letter of 'banana'?
+Answer: b
+
+What is the first letter of '
+
+[router picked: optometry | prompt skill: optometry]
+Eye Q: What is blurry distance vision called?
+A: Myopia.
+
+Q: What is the common name for strabismus?
+A: Crossed eyes.
+
+Optometry question: What is a fleshy growth over
+
