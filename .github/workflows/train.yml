@@ -1,0 +1,58 @@
+name: train
+
+on:
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: "Training steps"
+        default: "4000"
+      story_mb:
+        description: "TinyStories slice (MB)"
+        default: "30"
+      max_minutes:
+        description: "Time budget (minutes)"
+        default: "55"
+      lr:
+        description: "Peak learning rate"
+        default: "0.002"
+
+permissions:
+  contents: write
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install torch (CPU) + deps
+        run: pip install torch numpy --index-url https://download.pytorch.org/whl/cpu
+      - name: Install package
+        run: pip install -e .
+      - name: Train the Skill-Modular LM
+        run: |
+          python -m skill_lm.train \
+            --steps ${{ github.event.inputs.steps }} \
+            --story-mb ${{ github.event.inputs.story_mb }} \
+            --max-minutes ${{ github.event.inputs.max_minutes }} \
+            --lr ${{ github.event.inputs.lr }} \
+            --out ckpt
+      - name: Demo - router picks skills
+        if: always()
+        run: python -m skill_lm.generate --demo --tokens 48 || true
+      - name: Commit checkpoint + logs back to the repo
+        run: |
+          git config user.name "modular-lm-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add ckpt/model.pt ckpt/tokenizer.json ckpt/train_log.csv ckpt/samples.txt
+          git commit -m "train: checkpoint @ step ${{ github.event.inputs.steps }} (Actions run ${{ github.run_id }})" || echo "nothing to commit"
+          git push
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: checkpoint-${{ github.run_id }}
+          path: ckpt/

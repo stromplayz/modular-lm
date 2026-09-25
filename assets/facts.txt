@@ -1,0 +1,112 @@
+# Facts bank for the QA skill. Format: question|||answer (answers kept short on purpose)
+What is the capital of France?|||Paris
+What is the capital of Japan?|||Tokyo
+What is the capital of Italy?|||Rome
+What is the capital of Spain?|||Madrid
+What is the capital of Germany?|||Berlin
+What is the capital of England?|||London
+What is the capital of Russia?|||Moscow
+What is the capital of China?|||Beijing
+What is the capital of India?|||New Delhi
+What is the capital of Egypt?|||Cairo
+What is the capital of Canada?|||Ottawa
+What is the capital of Brazil?|||Brasilia
+What is the capital of Australia?|||Canberra
+What is the capital of Mexico?|||Mexico City
+What is the capital of Greece?|||Athens
+What is the capital of Portugal?|||Lisbon
+What is the capital of Norway?|||Oslo
+What is the capital of Sweden?|||Stockholm
+What is the capital of Poland?|||Warsaw
+What is the capital of Turkey?|||Ankara
+What is the largest planet?|||Jupiter
+What is the smallest planet?|||Mercury
+Which planet is closest to the sun?|||Mercury
+Which planet is known as the red planet?|||Mars
+Which planet has the most rings?|||Saturn
+What is the closest star to Earth?|||The sun
+What is the sun?|||A star
+What is the moon?|||Earth's natural satellite
+What gas do plants breathe in?|||Carbon dioxide
+What gas do humans breathe in?|||Oxygen
+What gas do humans breathe out?|||Carbon dioxide
+What is frozen water called?|||Ice
+What is water made of?|||Hydrogen and oxygen
+What is the chemical symbol for water?|||H2O
+What is the chemical symbol for gold?|||Au
+What is the chemical symbol for oxygen?|||O
+What is the hardest natural material?|||Diamond
+What organ pumps blood?|||The heart
+What organ lets you think?|||The brain
+What organ helps you breathe?|||The lungs
+How many legs does a spider have?|||Eight
+How many legs does an insect have?|||Six
+How many legs does a dog have?|||Four
+What animal says moo?|||A cow
+What animal says woof?|||A dog
+What animal says meow?|||A cat
+What animal is known as the king of the jungle?|||The lion
+What is the fastest land animal?|||The cheetah
+What is the largest animal on Earth?|||The blue whale
+What is the largest land animal?|||The elephant
+What is the tallest animal?|||The giraffe
+What bird cannot fly?|||The penguin
+What bird is a symbol of peace?|||The dove
+What do caterpillars turn into?|||Butterflies
+What do bees make?|||Honey
+What do cows give us?|||Milk
+What do hens lay?|||Eggs
+What color is the sky on a clear day?|||Blue
+What color is grass?|||Green
+What color is a banana?|||Yellow
+What color is an apple?|||Red or green
+What color is snow?|||White
+What color is the sun in the sky?|||Yellow
+What season comes after winter?|||Spring
+What season is the coldest?|||Winter
+What season is the hottest?|||Summer
+What season do leaves fall?|||Autumn
+What do we see in the sky at night?|||Stars
+What falls from clouds as rain?|||Water
+What is a young dog called?|||A puppy
+What is a young cat called?|||A kitten
+What is a group of fish called?|||A school
+What is a group of wolves called?|||A pack
+What is a baby frog called?|||A tadpole
+Where do fish live?|||In water
+Where do penguins live?|||In cold places
+Where does a bear sleep in winter?|||In a den
+What shape has three sides?|||A triangle
+What shape has four equal sides?|||A square
+What shape is a ball?|||A sphere
+How many days are in a week?|||Seven
+How many months are in a year?|||Twelve
+How many seasons are in a year?|||Four
+How many colors are in a rainbow?|||Seven
+What day comes after Monday?|||Tuesday
+What day comes after Friday?|||Saturday
+What tool tells the time?|||A clock
+What do we use to see?|||Eyes
+What do we use to hear?|||Ears
+What do we use to write?|||A pen or pencil
+What do we wear on our feet?|||Shoes
+What do we wear on our head?|||A hat
+What do you call frozen rain?|||Hail
+What is very hot and dry land?|||A desert
+What is a very big body of salt water?|||An ocean
+What is land surrounded by water?|||An island
+What is a flowing body of fresh water?|||A river
+What is a very high piece of land?|||A mountain
+What is a small river?|||A stream
+What do farmers grow in fields?|||Crops
+What do we call water falling from the sky?|||Rain
+What shines in the day sky?|||The sun
+What vehicle flies in the sky?|||An airplane
+What vehicle runs on rails?|||A train
+What vehicle sails on water?|||A boat
+Who teaches children at school?|||A teacher
+Who takes care of sick people?|||A doctor
+Who brings mail to your house?|||A mail carrier
+Who puts out fires?|||A firefighter
+Who flies airplanes?|||A pilot
+What do you call a person who bakes bread?|||A baker

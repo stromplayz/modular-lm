@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modular-lm"
+version = "0.1.0"
+description = "Skill-Modular Transformer: a from-scratch ~1M param language model with loadable SKILL EXPERTS - a router loads the right specialist per input, uses it, detaches it."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "stromplayz" }]
+keywords = ["llm", "tiny-lm", "mixture-of-experts", "skill-routing", "from-scratch", "transformer"]
+dependencies = ["torch>=2.1", "numpy"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+modular-lm = "skill_lm.generate:main"
+
+[tool.setuptools.packages.find]
+include = ["skill_lm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
