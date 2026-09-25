@@ -1,0 +1,154 @@
+# Optometry facts bank for the "optometry" skill. Format: question|||answer
+# Anatomy
+What part of the eye focuses light onto the retina?|||The lens
+What is the clear front window of the eye called?|||The cornea
+Which part of the eye controls how much light enters?|||The iris
+What is the colored part of the eye called?|||The iris
+What is the black hole in the center of the iris called?|||The pupil
+Where does the eye detect light?|||The retina
+What is the small central pit of sharpest vision called?|||The fovea
+What area of the retina is responsible for central vision?|||The macula
+Which nerve carries signals from the eye to the brain?|||The optic nerve
+What is the white outer coat of the eye called?|||The sclera
+What clear membrane covers the sclera and inside the eyelids?|||The conjunctiva
+What gel fills the space between the lens and the retina?|||The vitreous humor
+What fluid fills the space between the cornea and the iris?|||The aqueous humor
+Which structure produces aqueous humor?|||The ciliary body
+What muscle changes the shape of the lens to focus?|||The ciliary muscle
+What glands secrete the oily layer of the tear film?|||The meibomian glands
+What are the three layers of the tear film?|||Oil, water, and mucus
+Where do the upper eyelashes drain tears away to?|||The puncta
+What is the light-sensitive lining at the back of the eye?|||The retina
+Which retinal cells detect color?|||The cones
+Which retinal cells work best in dim light?|||The rods
+What is the junction where the optic nerves of both eyes meet?|||The optic chiasm
+What are the six muscles that move the eye called?|||The extraocular muscles
+Which cranial nerve controls most eye movement?|||The third cranial nerve
+# Refractive errors
+What is blurry distance vision called?|||Myopia
+What eye condition is also called nearsightedness?|||Myopia
+What is blurry near vision called?|||Hyperopia
+What eye condition is also called farsightedness?|||Hyperopia
+What refractive error causes distorted vision at all distances?|||Astigmatism
+What age-related loss of near focusing is called?|||Presbyopia
+What is the normal age of onset of presbyopia?|||Around 40 to 45
+What is a large difference in prescription between the two eyes called?|||Anisometropia
+What is reduced vision from an undeveloped eye in childhood called?|||Amblyopia
+What is the common name for amblyopia?|||Lazy eye
+What is misalignment of the two eyes called?|||Strabismus
+What is the common name for strabismus?|||Crossed eyes
+What lens curve corrects astigmatism?|||A cylinder
+What number on a prescription records astigmatism axis?|||The axis
+What is the near addition on a reading prescription called?|||The add
+What does a minus sphere correct?|||Myopia
+What does a plus sphere correct?|||Hyperopia
+What units measure lens power?|||Diopters
+What is the distance between the back of the lens and the eye called?|||The vertex distance
+What measurement is the distance between the two pupils?|||The pupillary distance
+# Conditions
+What disease damages the optic nerve, often with high eye pressure?|||Glaucoma
+What is the normal range of intraocular pressure?|||10 to 21 mmHg
+What test measures intraocular pressure?|||Tonometry
+What clouding of the natural lens causes blurry vision in age?|||A cataract
+What is the treatment for a cataract?|||Lens extraction surgery
+What disease damages the macula in older adults?|||Age related macular degeneration
+What is the abbreviation for age related macular degeneration?|||AMD
+What diabetes complication damages retinal blood vessels?|||Diabetic retinopathy
+What is the redness of the conjunctiva called?|||Conjunctivitis
+What is the common name for conjunctivitis?|||Pink eye
+What is the inflammation of the eyelid margins called?|||Blepharitis
+What condition causes a gritty, burning feeling from poor tears?|||Dry eye syndrome
+What is the thinning of the cornea into a cone shape called?|||Keratoconus
+What is a fleshy growth over the cornea called?|||A pterygium
+What is a red painful bump on the eyelid called?|||A stye
+What is drooping of the upper eyelid called?|||Ptosis
+What are the tiny moving shadows in the vitreous called?|||Floaters
+What is sudden flashing light in the side vision a warning of?|||Retinal detachment
+What is sensitivity to light called?|||Photophobia
+What is increased pressure in the cornea from fluid swelling called?|||Corneal edema
+What inherited condition causes poor night vision?|||Retinitis pigmentosa
+What condition makes the eyelid roll inward toward the eye?|||Entropion
+What condition makes the eyelid sag outward away from the eye?|||Ectropion
+# Tests and instruments
+What chart measures distance visual acuity?|||The Snellen chart
+What does a vision of 20/20 mean?|||Normal distance vision
+What does the first number in 20/40 mean?|||The testing distance in feet
+What instrument holds trial lenses for subjective refraction?|||The phoropter
+What microscope examines the front of the eye?|||The slit lamp
+What instrument measures the corneal curvature?|||The keratometer
+What objective test estimates refractive error with light streaks?|||Retinoscopy
+What machine measures refractive error automatically?|||The autorefractor
+What test maps the side vision?|||The visual field test
+What imaging scan gives cross sections of the retina?|||Optical coherence tomography
+What is the abbreviation for optical coherence tomography?|||OCT
+What test screens for color deficiency with numbered dot plates?|||The Ishihara test
+What test checks eye alignment by covering one eye?|||The cover test
+What normal reflex is a red glow from the retina in photos?|||The red reflex
+What drop dilates the pupil for examination?|||A mydriatic
+What instrument views the retina through the pupil?|||The ophthalmoscope
+What test measures how the cornea resists pressure?|||Pachymetry
+What does pachymetry measure?|||Corneal thickness
+What map shows the corneal surface shape in color?|||Corneal topography
+What vision test uses letters of decreasing size?|||The Snellen acuity test
+What does VA stand for in an eye exam?|||Visual acuity
+What does BCVA stand for?|||Best corrected visual acuity
+# Prescription abbreviations
+What does OD mean on a prescription?|||Right eye
+What does OS mean on a prescription?|||Left eye
+What does OU mean on a prescription?|||Both eyes
+What does IOP stand for?|||Intraocular pressure
+What does Rx mean on a prescription?|||The prescription
+What does SPH mean on a prescription?|||The sphere power
+What does CYL mean on a prescription?|||The cylinder power
+What does ADD mean on a prescription?|||The near addition
+What does PD stand for in glasses?|||Pupillary distance
+What does HTN stand for?|||Hypertension
+What does NV mean on a prescription?|||Near vision
+What does DV mean on a prescription?|||Distance vision
+# Lenses and corrections
+What lens type has two powers separated by a line?|||A bifocal
+What lens type blends distance and reading powers with no line?|||A progressive lens
+What lens design corrects astigmatism in contact lenses?|||A toric lens
+What special prism corrects double vision?|||A prism lens
+What lens coating blocks glare from water and roads?|||Polarization
+What lens coating blocks ultraviolet light?|||A UV filter
+What lens material makes strong prescriptions thinner?|||High index
+What hard gas permeable contact lens type gives sharp vision?|||An RGP lens
+What contact lens is thrown away after one day?|||A daily disposable
+What overnight contact lens reshapes the cornea while sleeping?|||Orthokeratology
+What is the wearing of contact lenses while sleeping usually discouraged for?|||Corneal hypoxia
+What tint reduces blue light from screens?|||A blue light filter
+# Clinical facts and advice
+How often should healthy adults have an eye exam?|||Every one to two years
+What rule says to rest your eyes every 20 minutes of screen work?|||The 20-20-20 rule
+What does the 20-20-20 rule tell you to look at?|||Something 20 feet away for 20 seconds
+Which systemic disease is a leading cause of blindness in adults?|||Diabetes
+What vision symptom does high blood pressure cause in the retina?|||Hypertensive retinopathy
+What vitamin is linked to macular health in AREDS studies?|||Vitamin A
+What nutrient in leafy greens supports the macula?|||Lutein
+What deficiency of which vitamin causes night blindness?|||Vitamin A
+What is the most common cause of preventable blindness in the world?|||Cataract
+What eye protection standard should safety glasses meet?|||ANSI Z87.1
+What is the medical name for color blindness with red green confusion?|||Deuteranopia
+Which gender is more commonly color deficient?|||Males
+What is normal near reading distance in centimeters?|||About 40 centimeters
+What is the medical term for the eye doctor who fits glasses?|||Optometrist
+What degree does an optometrist hold?|||A Doctor of Optometry
+What does the abbreviation O.D. after a name mean?|||Doctor of Optometry
+What professional perform eye surgery?|||An ophthalmologist
+What is a lens fitter who makes glasses called?|||An optician
+What is the earliest sign of glaucoma on a visual field test?|||A peripheral field defect
+What symptoms come with acute angle closure glaucoma?|||Pain, red eye, and halos
+What is the first line treatment for dry eye?|||Artificial tears
+What allergic eye symptom comes with itchy eyes?|||Allergic conjunctivitis
+What drops reduce redness by constricting blood vessels?|||Vasoconstrictors
+What age should a child have a first full eye exam?|||By age three
+What test measures a baby's vision without words?|||Preferential looking
+What is a white pupil reflex in a baby photo a warning of?|||Retinoblastoma
+What is temporary farsightedness all babies are born with?|||Normal infant hyperopia
+What vitamin helps tear production in dry eye?|||Omega 3
+What bacteria commonly causes a bacterial stye?|||Staphylococcus
+What is inflammation of the cornea called?|||Keratitis
+What is the wearing schedule of extended wear lenses?|||Up to 30 days
+What do the letters CL stand for on a chart?|||Contact lens
+What does the term emmetropia mean?|||A normal eye with no refractive error

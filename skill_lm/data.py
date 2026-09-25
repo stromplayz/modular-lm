@@ -1,11 +1,12 @@
 """Skill datasets for the Skill-Modular Language Model.
 
-Four skills, each with its own training corpus:
+Five skills, each with its own training corpus:
 
-  story : fluent simple English   -> TinyStories slice (downloaded, ranged)
-  qa    : factual answering       -> bundled facts bank (assets/facts.txt)
-  math  : exact arithmetic        -> generated on the fly (infinite)
-  count : counting letters        -> generated from a word list
+  story     : fluent simple English -> TinyStories slice (downloaded, ranged)
+  qa        : factual answering    -> bundled facts bank (assets/facts.txt)
+  math      : exact arithmetic     -> generated on the fly (infinite)
+  count     : counting letters     -> generated from a word list
+  optometry : eye-care domain facts-> bundled bank (assets/optometry.txt)
 
 Each example is a small self-contained text; corpora are built by joining
 examples with blank lines. The skill label for a training window is simply
@@ -18,7 +19,7 @@ import random
 import re
 import urllib.request
 
-SKILL_NAMES = ["story", "qa", "math", "count"]
+SKILL_NAMES = ["story", "qa", "math", "count", "optometry"]
 SKILL_IDS = {name: i for i, name in enumerate(SKILL_NAMES)}
 
 TINYSTORIES_URL = (
@@ -105,6 +106,25 @@ def gen_qa(rng: random.Random, facts: list[tuple[str, str]]) -> str:
     q, a = rng.choice(facts)
     return rng.choice(_QA_TEMPLATES).format(q=q, a=a)
 
+# --------------------------------------------------------------------- #
+# optometry (domain facts bank - dedicated skill expert)
+# --------------------------------------------------------------------- #
+# Distinctive lead-ins so the Skill Router can separate this domain from
+# general qa, plus a plain-Q slice that forces content-level routing.
+_OPTOMETRY_TEMPLATES = [
+    "Eye Q: {q}\nA: {a}.",
+    "Optometry question: {q}\nAnswer: {a}.",
+    "Eye exam Q: {q}\nAnswer: {a}.",
+    "Q: {q}\nA: {a}.",
+]
+
+
+def gen_optometry(rng: random.Random, facts: list[tuple[str, str]]) -> str:
+    q, a = rng.choice(facts)
+    # weight: 3/4 distinctive eye-domain lead-ins, 1/4 plain Q (content routing)
+    idx = rng.randrange(len(_OPTOMETRY_TEMPLATES))
+    return _OPTOMETRY_TEMPLATES[idx].format(q=q, a=a)
+
 # ---------------------------------------------------------------------- #
 # math
 # ---------------------------------------------------------------------- #
@@ -173,10 +193,12 @@ def gen_count(rng: random.Random) -> str:
 def build_skill_texts(
     story_path: str | None = None,
     facts_path: str | None = None,
+    optometry_path: str | None = None,
     story_mb: float = 30.0,
     n_math: int = 40_000,
     n_count: int = 30_000,
     n_qa: int = 20_000,
+    n_optometry: int = 20_000,
     seed: int = 1337,
 ) -> dict[str, str]:
     """Return {skill_name: corpus_text}. Heavy skills get many examples so
@@ -191,13 +213,19 @@ def build_skill_texts(
         facts = load_facts(facts_path)
         texts["qa"] = "\n\n".join(gen_qa(rng, facts) for _ in range(n_qa)) + "\n\n"
 
+    if optometry_path and os.path.exists(optometry_path):
+        eye_facts = load_facts(optometry_path)
+        texts["optometry"] = "\n\n".join(
+            gen_optometry(rng, eye_facts) for _ in range(n_optometry)
+        ) + "\n\n"
+
     texts["math"] = "\n\n".join(gen_math(rng) for _ in range(n_math)) + "\n\n"
     texts["count"] = "\n\n".join(gen_count(rng) for _ in range(n_count)) + "\n\n"
     return texts
 
 
 # ---------------------------------------------------------------------- #
-_ANS_RE = re.compile(r"Answer:\s*(.+)")
+_ANS_RE = re.compile(r"(?:Answer|A):\s*(.+)")
 
 
 def extract_answer(text: str) -> str | None:

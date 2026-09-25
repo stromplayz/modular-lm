@@ -29,11 +29,11 @@ class SkillModularConfig:
     n_heads: int = 4
     block_size: int = 256
     n_base_layers: int = 2
-    n_skills: int = 4
+    n_skills: int = 5
     expert_hidden: int = 192
     dropout: float = 0.1
     rope_base: float = 10000.0
-    skill_names: tuple = field(default=("story", "qa", "math", "count"))
+    skill_names: tuple = field(default=("story", "qa", "math", "count", "optometry"))
 
     def to_dict(self) -> dict:
         d = asdict(self)
@@ -43,7 +43,7 @@ class SkillModularConfig:
     @classmethod
     def from_dict(cls, d: dict) -> "SkillModularConfig":
         d = dict(d)
-        d["skill_names"] = tuple(d.get("skill_names", ("story", "qa", "math", "count")))
+        d["skill_names"] = tuple(d.get("skill_names", ("story", "qa", "math", "count", "optometry")))
         return cls(**d)
 
 

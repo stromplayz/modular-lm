@@ -73,12 +73,15 @@ def test_facts_load(tmp_path):
 def test_build_skill_texts_has_all_skills(tmp_path):
     facts = tmp_path / "facts.txt"
     facts.write_text("Q: test?|||yes\n")
+    eye = tmp_path / "optometry.txt"
+    eye.write_text("Eye test question?|||yes\n")
     texts = D.build_skill_texts(
-        story_path=None, facts_path=str(facts),
-        n_math=50, n_count=50, n_qa=20, seed=0,
+        story_path=None, facts_path=str(facts), optometry_path=str(eye),
+        n_math=50, n_count=50, n_qa=20, n_optometry=20, seed=0,
     )
     assert set(D.SKILL_NAMES) - {"story"} <= set(texts)
     assert texts["math"].count("\n\n") >= 49
+    assert "Eye test question?" in texts["optometry"] or "Eye Q" in texts["optometry"]
 
 
 def test_skill_ids():
@@ -86,3 +89,24 @@ def test_skill_ids():
     assert D.SKILL_IDS["qa"] == 1
     assert D.SKILL_IDS["math"] == 2
     assert D.SKILL_IDS["count"] == 3
+    assert D.SKILL_IDS["optometry"] == 4
+
+
+def test_optometry_examples_parse():
+    import random
+    rng = random.Random(4)
+    facts = D.load_facts(
+        __import__("os").path.join(
+            __import__("os").path.dirname(__import__("os").path.dirname(__import__("os").path.abspath(__file__))),
+            "assets", "optometry.txt",
+        )
+    )
+    assert len(facts) > 100
+    plain = 0
+    for _ in range(300):
+        ex = D.gen_optometry(rng, facts)
+        ans = D.extract_answer(ex)
+        assert ans, ex
+        if ex.startswith("Q:"):
+            plain += 1
+    assert 0 < plain < 150  # plain-Q slice exists but is a minority

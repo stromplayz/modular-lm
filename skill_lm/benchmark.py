@@ -79,17 +79,41 @@ def bench_count(model, tok) -> tuple[int, int, list]:
     return ok, len(words), fails
 
 
-def bench_router(model, tok, rng, n=80) -> tuple[int, int]:
+def bench_optometry(model, tok, n=60, rng=None) -> tuple[int, int, list]:
+    """Held-out style check: ask optometry facts with the SAME lead-in family
+    the expert trained on, then also a plain-Q slice (content-level routing)."""
+    facts = D.load_facts(os.path.join(REPO, "assets", "optometry.txt"))
+    rng = rng or random.Random(11)
+    order = list(range(len(facts)))
+    rng.shuffle(order)
+    picked = order[:n]
+    ok, fails = 0, []
+    for i in picked:
+        q, a = facts[i]
+        prompt = f"Eye Q: {q}\n"
+        got = ask(model, tok, prompt, D.SKILL_IDS["optometry"])
+        good = got.lower().rstrip(".") == a.lower().rstrip(".")
+        ok += good
+        if not good and len(fails) < 8:
+            fails.append(f"  {q} -> {got!r} (want {a!r})")
+    return ok, n, fails
+
+
+def bench_router(model, tok, rng, n=100) -> tuple[int, int]:
     """Can the router tell which skill a prompt needs?"""
     ok = 0
     prompts = []
-    for _ in range(n // 4):
+    eye_facts = D.load_facts(os.path.join(REPO, "assets", "optometry.txt"))
+    per = n // 5
+    for _ in range(per):
         op = rng.choice(["+", "-", "x"])
         a, b = rng.randint(2, 9), rng.randint(2, 9)
         prompts.append(("math", f"What is {a} {op} {b}?\n"))
         prompts.append(("count", f"How many letters are in the word '{rng.choice(D._WORDLIST)}'?\n"))
         q, _ = rng.choice(D.load_facts(os.path.join(REPO, "assets", "facts.txt")))
         prompts.append(("qa", f"Q: {q}\n"))
+        eq, _ = rng.choice(eye_facts)
+        prompts.append(("optometry", f"Eye Q: {eq}\n"))
         prompts.append(("story", "One day, a little girl named"))
     for want, p in prompts:
         ids = torch.tensor([tok.encode(p)], dtype=torch.long)
@@ -120,6 +144,9 @@ def main(argv=None) -> None:
     c_ok, c_n, c_fails = bench_count(model, tok)
     print(f"count : {c_ok:>4}/{c_n} = {100 * c_ok / c_n:5.1f}% exact-match")
     print("\n".join(c_fails))
+    o_ok, o_n, o_fails = bench_optometry(model, tok, rng=rng)
+    print(f"optom : {o_ok:>4}/{o_n} = {100 * o_ok / o_n:5.1f}% exact-match")
+    print("\n".join(o_fails))
     r_ok, r_n = bench_router(model, tok, rng)
     print(f"router: {r_ok:>4}/{r_n} = {100 * r_ok / r_n:5.1f}% skill picked correctly")
 

@@ -54,13 +54,16 @@ def build_all(args, log=log):
         except Exception as exc:  # noqa: BLE001
             log(f"[data] WARNING: download failed ({exc}); continuing without story data")
     facts_path = os.path.join(REPO, "assets", "facts.txt")
+    optometry_path = os.path.join(REPO, "assets", "optometry.txt")
 
     log("[data] building skill corpora...")
     texts = D.build_skill_texts(
         story_path=story_path if os.path.exists(story_path) else None,
         facts_path=facts_path,
+        optometry_path=optometry_path,
         story_mb=args.story_mb,
-        n_math=args.n_math, n_count=args.n_count, n_qa=args.n_qa, seed=args.seed,
+        n_math=args.n_math, n_count=args.n_count, n_qa=args.n_qa,
+        n_optometry=args.n_optometry, seed=args.seed,
     )
     missing = [s for s in D.SKILL_NAMES if s not in texts]
     if missing:
@@ -71,7 +74,8 @@ def build_all(args, log=log):
         tok = BPETokenizer.load(tok_path)
         log(f"[tok ] loaded tokenizer ({tok.vocab_size} ids) from {tok_path}")
     else:
-        sample = texts["story"][:1_500_000] + texts["qa"][:600_000] + \
+        sample = texts["story"][:1_500_000] + texts["qa"][:500_000] + \
+                 texts["optometry"][:500_000] + \
                  texts["math"][:600_000] + texts["count"][:600_000]
         tok = BPETokenizer.train(sample, args.vocab)
         os.makedirs(args.out, exist_ok=True)
@@ -123,6 +127,7 @@ PROMPTS = {
     "qa": "Q: What is the capital of France?\n",
     "count": "How many letters are in the word 'apple'?\n",
     "story": "One day, a little girl named",
+    "optometry": "Eye Q: What is blurry distance vision called?\n",
 }
 
 
@@ -158,6 +163,7 @@ def main(argv=None) -> None:
     p.add_argument("--n-math", type=int, default=40_000)
     p.add_argument("--n-count", type=int, default=30_000)
     p.add_argument("--n-qa", type=int, default=20_000)
+    p.add_argument("--n-optometry", type=int, default=20_000)
     p.add_argument("--eval-every", type=int, default=250)
     p.add_argument("--eval-batches", type=int, default=6)
     p.add_argument("--max-minutes", type=float, default=55.0)

@@ -21,6 +21,7 @@ DEMO_PROMPTS = [
     ("math", "Compute: 23 + 45\n"),
     ("qa", "Q: What is the capital of France?\n"),
     ("count", "How many letters are in the word 'apple'?\n"),
+    ("optometry", "Eye Q: What does OD mean on a prescription?\n"),
     ("story", "One day, a little girl named"),
 ]
 
