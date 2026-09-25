@@ -47,7 +47,7 @@ jobs:
         run: |
           git config user.name "modular-lm-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add ckpt/model.pt ckpt/tokenizer.json ckpt/train_log.csv ckpt/samples.txt
+          git add -f ckpt/model.pt ckpt/tokenizer.json ckpt/train_log.csv ckpt/samples.txt
           git commit -m "train: checkpoint @ step ${{ github.event.inputs.steps }} (Actions run ${{ github.run_id }})" || echo "nothing to commit"
           git push
       - name: Upload artifacts
