@@ -53,25 +53,28 @@ def download_tinystories(path: str, max_mb: float = 30.0) -> str:
 
 
 def load_story_corpus(path: str, min_words: int = 35, max_words: int = 350,
-                      opener_every: int = 4) -> str:
+                      opener_every: int = 3) -> str:
     """Load stories AND short opener fragments.
 
-    The opener fragments (first ~10 words, emitted for every `opener_every`-th
-    story) teach the Skill Router that a SHORT fluent-English prompt is a
-    story request - without them the router maps any short input to the
-    short-form skills (math/qa/count).
+    The opener fragments (emitted for every `opener_every`-th story, cycling
+    through several cut lengths) teach the Skill Router that a SHORT
+    fluent-English prompt is a story request - without them the router maps
+    any short input to the short-form skills (math/qa/count).
     """
     text = open(path, encoding="utf-8", errors="ignore").read()
     parts = re.split(r"<\|end_of_text\|>|<|endoftext\|>|\n\s*\n", text)
     keep = []
     n_openers = 0
+    cut_lens = (5, 7, 10, 12)
     for p in parts:
         p = " ".join(p.split())
         n = len(p.split())
         if min_words <= n <= max_words:
             keep.append(p)
             if n_openers % opener_every == 0:
-                keep.append(" ".join(p.split()[:10]))
+                cut = cut_lens[(n_openers // opener_every) % len(cut_lens)]
+                if n > cut:
+                    keep.append(" ".join(p.split()[:cut]))
             n_openers += 1
     return "\n\n".join(keep) + "\n\n"
 
