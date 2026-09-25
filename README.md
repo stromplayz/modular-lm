@@ -124,16 +124,16 @@ Exact-match benchmarks on fresh, unseen prompts (`python -m skill_lm.benchmark`)
 
 | Skill | Accuracy | Notes |
 |---|---|---|
-| `math` | **95.3%** | addition 94%, subtraction 91%, multiplication **100%** |
+| `math` | **97.3%** | addition 98%, subtraction 93%, multiplication **100%** |
 | `qa`   | **100%**  | all 111 facts in the bank answered exactly (capitals, science, days/months) |
 | `count`| **100%**  | all 89 words: letter counts + first letters |
-| `router`| ~100% on natural prompts | loads the right expert; very short (<8 token) story prefixes can still misroute |
+| `router`| ~97% on natural prompts | loads the right expert; one 7-token stock prefix ("One day, a little girl named") can still lean math |
 
 The router's live confidence is printed with every demo generation
 (`ROUTER : math [router correct] (probs: math=0.97, ...)`) and the benchmark
 tool prints per-operation breakdowns.
 
-**How math got to 95%**: tiny models cannot memorize 2-digit arithmetic from
+**How math got to 97%**: tiny models cannot memorize 2-digit arithmetic from
 ~1.6 exposures per (a, b) pair. Two data-side fixes did it:
 1. **Operand curriculum** - 50% of operands <= 12, 30% <= 29, 20% <= 99
 2. **Place-value scratchpad** - 60% of addition examples show the algorithm:
@@ -149,7 +149,7 @@ tool prints per-operation breakdowns.
 - [x] Training pipeline with per-skill eval + router accuracy
 - [x] Test suite (tokenizer round-trip, routing, dispatch, overfit)
 - [x] Local calibration run
-- [x] Trained checkpoints committed by Actions (v3 + v4: math 95.3%, qa 100%, count 100%)
+- [x] Trained checkpoints committed by Actions (v5: math 97.3%, qa 100%, count 100%)
 - [x] GitHub Actions training workflow
 - [ ] Longer community-scale training runs (open `train` workflow with more steps)
 
