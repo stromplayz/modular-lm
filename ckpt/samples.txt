@@ -2400,3 +2400,1116 @@ Answer: 6
 
 How many letters are in the word '
 
+--- samples @ 07:45:53 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named "Yar. She happy. When the fared and he had and so rebed. He wanted to see. She had a till.
+
+Ly. Lily had a boy and not was the park. He
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: A oxygen.
+
+Q: What vehicle wrid.
+
+A: What is the capital of Four.
+
+What is the capital of Far?
+Answer: Splanala.
+
+
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+
+What is 9 = ?
+Answer: 10
+
+
+What is 9 = ?
+10 + 9 = 10. 8 = 11 = 5 + 5 = ?
+Answer: 35
+
+What is 7 x 5?
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 6
+
+Count the letters in 'milk'.
+Answer: 5
+
+What is the letters in the word 'water'?
+Answer: 6
+
+How many letters are in the word 'mon'?
+
+
+--- samples @ 07:48:23 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Lily, the seent, and said, "Don, she wanted to help her friends,, and sist, she was a dadx and come. One day, he saw a trey and d
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Mars.
+
+Question: What gas do we use to our elephant?
+Answer: Mercury.
+
+What is a symbol for water called?
+Answer: A ditten.
+
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 99
+
+What is 12 x 5?
+Answer: 46
+
+What is 7 - 7?
+Answer: 9
+
+Compute: 12 x 4
+Answer: 94
+
+What is 3 + 5
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 4
+
+How many letters are in the word 'turtle'?
+Answer: 6
+
+How many letters are in the word 'cheese'?
+Answer: 6
+
+How many letters are in the
+
+--- samples @ 07:50:52 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 119.
+Answer: 123
+
+Compute: 11 + 2
+0 + 0 = 0. 2 + 2 = 6. 0 + 6 = 4.
+Answer: 4
+
+What is 10 x 7?
+Answer
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What shape has three sides?
+A: A triangle.
+
+What do plants breathe in?
+Answer: Carbon dioxide.
+
+Question
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 56
+
+What is 4 x 5?
+Answer: 64
+
+Compute: 9 + 9
+10 + 0 = 10. 3 + 8 = 8. 10 + 5 = 13.
+Answer: 13
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'tree'?
+Answer: 4
+
+How many letters are in the word 'fish'?
+Answer: 4
+
+How many letters are in the word 'b
+
+--- samples @ 07:53:21 ---
+[router picked: story | prompt skill: story]
+One day, a little girl named Tim and saw her toys and he loved to play with her pieve. One day, he looked around the park with her bike. She decided to cry her chairs with her mom. She went to
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What do we wear on our feet?
+A: Shoes.
+
+What do farmers grow in fields?
+Answer: Cro
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+10 + 50 = 90. 1 + 9 = 9. 80 + 9 = 89.
+Answer: 87
+
+Compute: 11 - 0
+Answer: 11
+
+Compute: 10 x 4
+Answer:
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'bird'?
+Answer: 4
+
+What is the first letter of 'night'?
+Answer: g
+
+Count the letters in 'bird'.
+Answer:
+
+--- samples @ 07:55:50 ---
+[router picked: count | prompt skill: story]
+One day, a little girl named a letters in 'moon'.
+Answer: 6
+
+How many letters are in the word 'turtle'?
+Answer: 6
+
+How many letters are in the word 'friend'?
+Answer: 6
+
+
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What gas do plants breathe in?
+Answer: Carbon dioxide.
+
+Question: What is the capital of Spain?
+Answer: Madrid.
+
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 43
+
+What is 10 - 6?
+Answer: 3
+
+6 x 2 = ?
+Answer: 14
+
+What is 11 - 4?
+Answer: 3
+
+What is 12 - 6?
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'spider'?
+Answer: 6
+
+How many letters are in the word 'moon'?
+Answer: 4
+
+How many letters are in the word '
+
+--- samples @ 07:58:18 ---
+[router picked: count | prompt skill: story]
+One day, a little girl named 6
+Answer: 6
+
+How many letters are in the word 'smile'?
+Answer: 5
+
+How many letters are in the word 'music'?
+Answer: 5
+
+Count the letters in '
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of France?
+Answer: Paris.
+
+Q: What is the capital of Portugal?
+A: Lisbon.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 40. 3 + 5 = 7. 40 + 7 = 47.
+Answer: 47
+
+What is 9 + 8?
+0 + 0 = 0. 9 + 8 = 16. 0 +
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+What is the first letter of 'butterfly'?
+Answer: b
+
+Count the letters in 'farmer'.
+Answer: 6
+
+Count the letters in 'winter'.
+Answer:
+
+--- samples @ 08:00:47 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 16 = ?
+Answer: 16
+
+What is 3 - 0?
+Answer: 3
+
+What is 5 + 1?
+Answer: 6
+
+What is 99 - 8?
+Answer: 97
+
+What
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of Poland?
+Answer: Warsaw.
+
+What do caterpillars turn into?
+Answer: Butterflies.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 110. 5 + 5 = 8. 110 + 8 = 118.
+Answer: 118
+
+What is 9 x 11?
+Answer: 99
+
+What is 2 + 16
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+What is the first letter of 'doctor'?
+Answer: d
+
+How many letters are in the word 'banana'?
+Answer: 6
+
+How many letters are in the word '
+
+--- samples @ 08:03:16 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 90
+
+Compute: 9 x 6
+Answer: 56
+
+Compute: 8 x 11
+Answer: 96
+
+What is 6 x 2?
+Answer: 12
+
+Compute: 5 x 10
+Answer:
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is a small river?
+Answer: A stream.
+
+Question: What is the capital of Brazil?
+Answer: Brasilia.
+
+What is
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 40. 3 + 5 = 8. 40 + 8 = 48.
+Answer: 48
+
+What is 5 + 12?
+Answer: 17
+
+What is 7 x 12?
+Answer: 84
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'princess'?
+Answer: 8
+
+Count the letters in 'winter'.
+Answer: 6
+
+How many letters are in the word 'winter
+
+--- samples @ 08:05:44 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 8 = 88. 10 + 8 = 18.
+Answer: 18
+
+Compute: 3 x 11
+Answer: 33
+
+Compute: 5 x 3
+Answer: 15
+
+Compute: 5 + 8
+0 + 0
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What do you call a person who bakes bread?
+Answer: A baker.
+
+What color is an apple?
+Answer: Red or green.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 69
+
+What is 12 - 11?
+Answer: 1
+
+What is 4 x 9?
+Answer: 36
+
+Compute: 7 x 12
+Answer: 84
+
+What is 9 x 10?
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'village'?
+Answer: 7
+
+How many letters are in the word 'spider'?
+Answer: 6
+
+Count the letters in 'd
+
+--- samples @ 08:08:15 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 10 = 110. 2 + 0 = 2. 20 + 2 = 22. 2 + 22 = 12.20 + 12 = 32.
+Answer: 32
+
+Compute: 5 + 1
+0 + 0 = 0.
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of Canada?
+Answer: Ottawa.
+
+Question: What shape has three sides?
+Answer: A triangle.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 37
+
+Compute: 8 x 3
+Answer: 24
+
+Compute: 15 - 8
+Answer: 9
+
+Compute: 11 + 0
+10 + 0 = 10. 1 + 0 = 1. 10 +
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'milk'?
+Answer: 4
+
+Count the letters in 'doctor'.
+Answer: 6
+
+Count the letters in 'blue'.
+Answer:
+
+--- samples @ 08:10:44 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 06
+
+Compute: 8 x 10
+Answer: 80
+
+What is 8 x 2?
+Answer: 16
+
+What is 3 - 1?
+Answer: 2
+
+Compute: 6 x 10
+Answer:
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What is the capital of Sweden?
+A: Stockholm.
+
+Question: What is a young cat called?
+Answer: A kitt
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 70. 3 + 5 = 8. 70 + 8 = 78.
+Answer: 78
+
+Compute: 9 x 5
+Answer: 45
+
+5 + 24 = ?
+0
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'cheese'?
+Answer: 6
+
+Count the letters in 'school'.
+Answer: 6
+
+How many letters are in the word 'pap
+
+--- samples @ 08:13:14 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 34
+Answer: 54
+
+1 + 5 = ?
+Answer: 6
+
+Compute: 6 + 4
+0 + 0 = 0. 6 + 4 = 10. 0 + 10 = 10.
+Answer: 10
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What animal says meow?
+A: A cat.
+
+What is the capital of England?
+Answer: London.
+
+Question: What is the capital
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 49
+
+What is 12 - 2?
+Answer: 10
+
+What is 9 x 4?
+Answer: 36
+
+12 + 5 = ?
+10 + 0 = 10. 2 + 5 = 7.
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'spider'?
+Answer: 6
+
+Count the letters in 'kite'.
+Answer: 4
+
+Count the letters in 'fish'.
+Answer:
+
+--- samples @ 08:15:44 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 0. 10 + 8 = 18. 10 + 18 = 28.
+Answer: 28
+
+Compute: 12 x 4
+Answer: 48
+
+What is 10 + 0?
+10 + 0 = 10. 0 + 0 =
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is the capital of Japan?
+Answer: Tokyo.
+
+What season do leaves fall?
+Answer: Autumn.
+
+Question
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 58
+
+Compute: 4 x 10
+Answer: 40
+
+What is 3 x 5?
+Answer: 15
+
+What is 10 x 3?
+Answer: 30
+
+What is 6 + 11?
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'butterfly'?
+Answer: 9
+
+Count the letters in 'book'.
+Answer: 4
+
+Count the letters in 'shadow'.
+
+--- samples @ 08:18:13 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 2 = ?
+Answer: 4
+
+What is 12 x 3?
+Answer: 36
+
+What is 91 - 9?
+Answer: 72
+
+Compute: 7 x 8
+Answer: 56
+
+Compute
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is a young dog called?
+Answer: A puppy.
+
+What is the capital of Germany?
+Answer: Berlin.
+
+What
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+11 x 5 = ?
+Answer: 55
+
+What is 11 - 8?
+Answer:
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'cat'?
+Answer: 3
+
+Count the letters in 'table'.
+Answer: 5
+
+What is the first letter of 'music'?
+
+
+--- samples @ 08:20:43 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 10 = 10. 2 + 8 = 10. 10 + 10 = 20.
+Answer: 20
+
+What is 12 x 12?
+Answer: 144
+
+What is 7 x 7?
+Answer: 49
+
+
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What do we see in the sky at night?
+A: Stars.
+
+Q: What is the chemical symbol for water?
+A: H2O.
+
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+What is 8 - 5?
+Answer: 3
+
+Compute: 3 x 7
+Answer: 21
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'blue'?
+Answer: 4
+
+Count the letters in 'monkey'.
+Answer: 6
+
+What is the first letter of 'morning
+
+--- samples @ 08:23:12 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 7 + 0 = 7. 50 + 7 = 57.
+Answer: 57
+
+What is 7 x 12?
+Answer: 84
+
+Compute: 9 x 6
+Answer: 54
+
+Compute:
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Question: What is a young cat called?
+Answer: A kitten.
+
+Question: How many seasons are in a year?
+Answer: Four.
+
+
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 70. 3 + 5 = 8. 70 + 8 = 78.
+Answer: 78
+
+What is 7 + 9?
+0 + 0 = 0. 7 + 9 = 16.
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'snow'.
+Answer: 4
+
+How many letters are in the word 'chair'?
+Answer: 5
+
+How many letters are in the word 'green'?
+
+--- samples @ 08:25:43 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 5
+Answer: 55
+
+What is 10 - 9?
+Answer: 1
+
+Compute: 8 + 4
+0 + 0 = 0. 8 + 4 = 12. 0 + 12 = 12.
+Answer: 12
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What is the hardest natural material?
+A: Diamond.
+
+What do we use to see?
+Answer: Eyes.
+
+Question
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+What is 5 x 7?
+Answer: 35
+
+What is 10 - 0?
+Answer:
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'story'.
+Answer: 5
+
+Count the letters in 'camel'.
+Answer: 5
+
+Count the letters in 'moon'.
+Answer: 4
+
+
+
+--- samples @ 08:28:13 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 8
+
+Compute: 14 + 0
+Answer: 14
+
+Compute: 24 + 25
+Answer: 59
+
+Compute: 9 x 8
+Answer: 72
+
+Compute: 12 x 6
+Answer: 72
+
+
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What organ helps you breathe?
+Answer: The lungs.
+
+Question: What is a flowing body of fresh water?
+Answer: A river.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+Answer: 88
+
+What is 12 x 7?
+Answer: 84
+
+Compute: 8 x 9
+Answer: 72
+
+5 x 6 = ?
+Answer: 30
+
+Compute: 9 x 7
+Answer
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'turtle'?
+Answer: 6
+
+Count the letters in 'friend'.
+Answer: 6
+
+How many letters are in the word 'koal
+
+--- samples @ 08:30:43 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 54 + 3 = ?
+50 + 0 = 50. 4 + 3 = 7. 50 + 7 = 57.
+Answer: 57
+
+What is 7 x 3?
+Answer: 21
+
+
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is the capital of Norway?
+Answer: Oslo.
+
+Question: What is the capital of Norway?
+Answer: Oslo.
+
+Q:
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+Compute: 8 x 7
+Answer: 56
+
+11 x 8 = ?
+Answer: 8
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+Count the letters in 'music'.
+Answer: 5
+
+How many letters are in the word 'game'?
+Answer: 4
+
+How many letters are in the word 'moon'?
+
+--- samples @ 08:33:13 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 4
+
+Compute: 12 - 8
+Answer: 4
+
+Compute: 8 x 8
+Answer: 64
+
+Compute: 9 x 8
+Answer: 72
+
+Compute: 8 x 10
+Answer: 80
+
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is the capital of France?
+Answer: Paris.
+
+Q: What bird cannot fly?
+A: The penguin.
+
+Question:
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+Compute: 7 - 4
+Answer: 3
+
+What is 12 - 2?
+Answer: 10
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'story'?
+Answer: 5
+
+What is the first letter of 'banana'?
+Answer: b
+
+How many letters are in the word '
+
+--- samples @ 08:35:43 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 3 x 12 = ?
+Answer: 36
+
+What is 22 - 12?
+Answer: 10
+
+What is 12 - 3?
+Answer: 9
+
+What is 4 x 9?
+Answer: 36
+
+Compute
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What organ lets you think?
+Answer: The brain.
+
+What is the capital of India?
+Answer: New Delhi.
+
+Question:
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+What is 2 x 12?
+Answer: 24
+
+Compute: 4 x 7
+Answer: 28
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'garden'?
+Answer: 6
+
+How many letters are in the word 'cat'?
+Answer: 3
+
+How many letters are in the word 'g
+
+--- samples @ 08:38:15 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 6
+Answer: 64
+
+What is 5 x 2?
+Answer: 10
+
+Compute: 6 x 2
+Answer: 12
+
+Compute: 5 x 12
+Answer: 60
+
+Compute: 3 - 0
+
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+Q: What season comes after winter?
+A: Spring.
+
+Question: What is the capital of Sweden?
+Answer: Stockholm.
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+Compute: 11 x 10
+Answer: 110
+
+Compute: 7 - 0
+Answer: 7
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+How many letters are in the word 'milk'?
+Answer: 4
+
+How many letters are in the word 'smile'?
+Answer: 5
+
+How many letters are in the word '
+
+--- samples @ 08:40:47 ---
+[router picked: math | prompt skill: story]
+One day, a little girl named 5 x 9
+Answer: 45
+
+3 x 11 = ?
+Answer: 33
+
+Compute: 12 x 9
+Answer: 108
+
+What is 3 + 6?
+0 + 0 = 0. 3 +
+
+[router picked: qa | prompt skill: qa]
+Q: What is the capital of France?
+A: Paris.
+
+What is the capital of England?
+Answer: London.
+
+What vehicle flies in the sky?
+Answer: An airplane.
+
+What bird is a
+
+[router picked: math | prompt skill: math]
+Compute: 23 + 45
+20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68.
+Answer: 68
+
+Compute: 88 - 11
+Answer: 77
+
+What is 0 + 93?
+
+
+[router picked: count | prompt skill: count]
+How many letters are in the word 'apple'?
+Answer: 5
+
+What is the first letter of 'cloud'?
+Answer: c
+
+Count the letters in 'spider'.
+Answer: 6
+
+Count the letters in 'sun'.
+Answer:
+
