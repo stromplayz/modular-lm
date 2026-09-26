@@ -121,6 +121,20 @@ _pat(r"^(?P<x>[A-Z][\w'â€™\- ]{2,60}?)\s+is\s+(?:a|an|the)\s+(?P<y>[A-Za-z][\w'â
      lambda m: (f"What is {m['x'].strip()}?", m["y"].strip()))
 
 _BAD_Q = re.compile(r"\b(this|these|those|it|he|she|they|also|however|there)\b", re.I)
+# reject junk SUBJECTS: pronoun openers, clauses impersonating entities
+_BAD_X = re.compile(
+    r"^(There|This|That|These|Those|It|He|She|They|Its|It's|However|Although|"
+    r"Some|Most|Many|While|When|After|Before|During|Today|Currently|Originally)\b", re.I)
+# answers must be concise, no trailing clauses
+_BAD_Y = re.compile(r"\b(that|which|where|who)\b", re.I)
+
+
+def _clean_x(x: str) -> str:
+    x = x.strip()
+    # 'The blue whale' reads better in questions as 'the blue whale'
+    if x.startswith("The "):
+        x = "the " + x[4:]
+    return x
 
 
 def mine_facts(text: str) -> list[tuple[str, str, str]]:
@@ -144,8 +158,15 @@ def mine_facts(text: str) -> list[tuple[str, str, str]]:
                     continue
                 if not q or not a or len(a) < 2 or len(a) > 90:
                     continue
+                if len(a.split()) > 10 or _BAD_Y.search(a):
+                    continue
+                if _BAD_X.search(q.split("is ", 1)[-1].split("was ", 1)[-1]
+                                  .split("died", 1)[0].strip() or ""):
+                    continue
                 if _BAD_Q.search(q.split("?", 1)[0].split()[-1] if q else ""):
                     continue
+                # 'What is The blue whale?' -> 'What is the blue whale?'
+                q = re.sub(r"(What is|Where is) The ", r"\1 the ", q)
                 out.append((q.strip(), a.strip().rstrip("."), sent))
                 break
     return out
