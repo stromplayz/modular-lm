@@ -65,9 +65,9 @@ All six packs co-loaded, routing among them (`python -m skill_lm.bench_lua`):
 | `optometry` (146 facts) | **100%** | eye-care domain |
 | `knowledge` bank recall | **100%** | absorbed wiki/seed fact bank (154 facts) |
 | `count` (89 words) | **100%** | letter counting |
-| `math` | ~93-98% | fresh arithmetic, exact match |
-| `router` (co-loaded, 180 probes) | **95%** | 6-way routing among live packs |
-| `knowledge` held-out | 0% | honest limit: a 115K-param expert memorizes its bank; *generalization* needs the bigger trunks on the roadmap |
+| `math` | 50.7% | uniform 0-99 operands, exact match — the inherited v5 math expert scores 41.3% on the same eval; its curriculum favored small operands. `math` pack v2 (retrain with wider operand coverage via `train_pack`) is on the roadmap — **this is exactly the FrozenCore pitch: upgrade one pack, touch nothing else** |
+| `router` (co-loaded, 180 probes) | **96%** | 6-way routing among live packs |
+| `knowledge` held-out | 4% | honest limit: a 115K-param expert memorizes its bank; *generalization* needs the bigger trunks on the roadmap |
 
 `forgetting: ZERO-FORGETTING VERIFIED` — the bench diffs against the recorded
 baseline and proves old skills did not move when the knowledge pack trained.

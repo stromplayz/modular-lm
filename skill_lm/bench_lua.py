@@ -35,7 +35,8 @@ def log(msg: str) -> None:
     print(msg, flush=True)
 
 
-def ask_pack(mixer, tok, prompt: str, pack: str, max_new: int = 14) -> str:
+def ask_pack(mixer, tok, prompt: str, pack: str, max_new: int = 28) -> str:
+    # 28 tokens: room for the place-value scratchpad + 'Answer:' line on 2-digit adds
     ids = torch.tensor([tok.encode(prompt)], dtype=torch.long)
     out, _ = mixer.generate(ids, max_new_tokens=max_new, pack=pack, greedy=True)
     text = tok.decode(out[0].tolist())[len(prompt):]
