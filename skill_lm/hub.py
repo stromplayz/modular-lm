@@ -40,7 +40,12 @@ UA = {"User-Agent": "modular-lm-hub/0.3"}
 
 
 def _http(url: str, timeout: int = 30) -> bytes:
-    req = urllib.request.Request(url, headers=UA)
+    headers = dict(UA)
+    # optional auth raises API rate limits (raw.githubusercontent needs none)
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token and "api.github.com" in url:
+        headers["Authorization"] = f"token {token}"
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
