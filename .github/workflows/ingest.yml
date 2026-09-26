@@ -1,0 +1,48 @@
+name: ingest-wiki
+
+# Crawl Wikipedia from GitHub's clean-IP runners (local sandboxes often get
+# rate-limited), mine QA facts, and commit the expanded fact banks back.
+# Then run `packs` workflow to retrain the knowledge pack on the new facts.
+
+on:
+  workflow_dispatch:
+    inputs:
+      topics:
+        description: "Max pages to crawl (0 = full DEFAULT_TOPICS list)"
+        default: "40"
+      delay:
+        description: "Seconds between requests (be polite)"
+        default: "0.5"
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install package
+        run: pip install -e .
+      - name: Crawl Wikipedia + mine facts
+        run: |
+          python -m skill_lm.ingest \
+            --topics ${{ github.event.inputs.topics }} \
+            --delay ${{ github.event.inputs.delay }}
+      - name: Report
+        run: |
+          echo "train facts:  $(wc -l < assets/knowledge/wiki_facts.txt)"
+          echo "held-out:     $(wc -l < assets/knowledge/wiki_facts_eval.txt)"
+          head -5 assets/knowledge/wiki_facts.txt
+      - name: Commit fact banks
+        run: |
+          git config user.name "modular-lm-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add assets/knowledge/wiki_facts.txt assets/knowledge/wiki_facts_eval.txt
+          git commit -m "ingest: wikipedia fact banks updated (Actions run ${{ github.run_id }})" || echo "nothing to commit"
+          git pull --rebase origin main || true
+          git push

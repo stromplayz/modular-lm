@@ -1,13 +1,13 @@
-# Skill-Modular Transformer (SMT)
+# Skill-Modular Transformer (SMT) — FrozenCore Edition
 
-A **from-scratch** tiny language model (~**0.82M parameters**, ~**3.3 MB** file)
-with loadable **SKILL EXPERTS**: a router reads your input, **loads** the one
-specialist block that owns that kind of task, **uses** it, and **detaches** it.
+A **from-scratch** tiny language model with loadable **SKILL PACKS**: a tiny
+frozen main model routes your input, **fetches on demand** the specialist
+submodel that owns that kind of task, **uses** it, and **deloads** it.
 
 > This is **not** mixture-of-experts. MoE shards every token across anonymous
-> FFN slices. SMT has *dedicated skills* — a math expert, a QA expert, a
-> counting expert, a story expert — each a full transformer block trained to
-> **own** its task, and a router that loads exactly one per request.
+> FFN slices. SMT has *dedicated skills* — a math pack, a QA pack, a knowledge
+> pack — each a full transformer block trained to **own** its task, stored as
+> an independent file, loaded only when needed.
 
 No transformer library. No pretrained weights. No tokenizer package.
 The BPE tokenizer, the model, the router, the training loop — all hand-built
@@ -15,108 +15,151 @@ in this repo, trained on free CPU compute (GitHub Actions).
 
 ---
 
-## Architecture
+## v0.3.0 — FrozenCore architecture
+
+**The main model never trains again.** All learning happens in pack files.
 
 ```
-                     ┌─────────────────────────────────────────┐
- tokens ──► embed ──► SHARED TRUNK  (2 blocks: the "base brain") │
-                     │  learns general language understanding    │
-                     └────────────────┬────────────────────────┘
-                                      │ pooled trunk state
-                                      ▼
-                          ┌───────────────────────┐
-                          │   SKILL ROUTER        │  softmax over skills
-                          │   load -> use ->      │  one skill per request
-                          │        detach         │
-                          └───────────┬───────────┘
-                     ┌────────────────┼────────────────┐
-                     ▼                ▼                ▼
-               [story expert]   [qa expert]     [math expert]   [count expert]
-                stays detached unless the router loads it
-                                      │
-                                      ▼
-                     shared LM head  ──►  next-token logits
+┌─────────────────────────────────────────────────────────────┐
+│  TRUNK (FROZEN FOREVER) — wte + 2 blocks + tied lm_head     │
+│  the "main model": 361K params, 1.4 MB, zero future gradients│
+└───────────────┬─────────────────────────────────────────────┘
+                │ pooled hidden state (detached, no_grad)
+    ┌───────────┴──────────────────────────────────┐
+    │  SKILL PACKS (independently trainable files)  │
+    │  packs/<name>.pack = expert block + 1-vs-rest │
+    │  router head ("is this MY kind of input?")    │
+    └───────────┬──────────────────────────────────┘
+                │ softmax over LOADED packs only  ← CO-LOADING
+                ▼
+     chosen pack's expert → frozen lm_head → tokens
 ```
 
-- **Skill Router** — a linear head over mean-pooled trunk state. Trained with
-  cross-entropy against the skill that produced the data (force-routed during
-  training; argmax at inference).
-- **Skill Experts** — full pre-norm blocks (attention + MLP + residuals).
-  During dispatch, a batch splits by assigned skill: each expert touches
-  **exactly its own rows** and nothing else. Experts nobody needs this batch
-  never run — they stay detached.
-- **Shared trunk + tied LM head** — everything above skills is common ground,
-  so every skill benefits from the same language foundation.
-
-### Parameter budget (default config)
-
-| Part | Params |
+| Property | How it is guaranteed |
 |---|---|
-| Embeddings (tied head, vocab 1024 x d 128) | 131 K |
-| Shared trunk (2 blocks) | ~198 K |
-| Skill experts (4 blocks, **one active**) | ~460 K total, **~115 K active** |
-| Router + norms | ~0.4 K |
-| **Total** | **~821 K** |
-| **Active per request** | **~477 K (~58%)** |
+| **Main model never retrains** | trunk params are leaf-frozen and run under `no_grad`; gradients physically cannot reach it |
+| **Train only one submodel** | training a pack rewrites exactly one file (`packs/<name>.pack`); trunk + other packs are never opened for writing |
+| **Load packs together** | one-vs-rest router heads: any subset co-loads; routing = softmax across whoever is loaded |
+| **Fetch from GitHub on demand** | the repo IS the hub (`packs/`); `hub.py` lists/fetches/caches packs from raw.githubusercontent.com |
+| **Deload after use** | `mixer.drop_pack(name)` drops the expert from RAM; only the disk cache remains |
+| **Zero forgetting** | old pack files are immutable → old benchmark scores are bit-identical after any new pack training (verified by `bench_lua`) |
 
-Checkpoint: **3.3 MB fp32** — 60x under the 200 MB budget.
+### Why this beats one big model (for small scale)
+
+- **Surgical upgrades**: worse at law? train `law.pack` 10 minutes. A monolith
+  would retrain end-to-end and risk every other skill.
+- **Distribution**: a pack is a single ~460 KB file (124 KB int8). Host packs
+  anywhere — the hub resolver needs one URL.
+- **Compose at runtime**: conversation about eyes + math? load 2 packs (~0.9 MB
+  RAM); the other 4 stay on disk.
+- **40 GB datasets, no 40 GB downloads**: `stream.py` cuts small random windows
+  straight out of remote HF parquet/txt via HTTP Range requests.
+
+### v0.3.0 LUA benchmark (Language Understanding & Answering)
+
+All six packs co-loaded, routing among them (`python -m skill_lm.bench_lua`):
+
+| Section | Score | Notes |
+|---|---|---|
+| `qa` (111 facts) | **100%** | factoid answering |
+| `optometry` (146 facts) | **100%** | eye-care domain |
+| `knowledge` bank recall | **100%** | absorbed wiki/seed fact bank (154 facts) |
+| `count` (89 words) | **100%** | letter counting |
+| `math` | ~93-98% | fresh arithmetic, exact match |
+| `router` (co-loaded, 180 probes) | **95%** | 6-way routing among live packs |
+| `knowledge` held-out | 0% | honest limit: a 115K-param expert memorizes its bank; *generalization* needs the bigger trunks on the roadmap |
+
+`forgetting: ZERO-FORGETTING VERIFIED` — the bench diffs against the recorded
+baseline and proves old skills did not move when the knowledge pack trained.
 
 ---
 
-## The five skills
+## The packs
 
-| Skill | Corpus | Source |
+| Pack | Corpus | Source |
 |---|---|---|
 | `story` | fluent simple English | [TinyStories](https://huggingface.co/datasets/roneneldan/TinyStories) slice (range-downloaded) |
 | `qa` | factual Q -> A | bundled facts bank (`assets/facts.txt`) |
 | `math` | exact arithmetic (+, -, x) | generated on the fly (infinite) |
 | `count` | letter counting, first-letter | generated from word list |
-| `optometry` | eye-care domain facts (anatomy, refractive errors, tests, prescriptions, conditions) | bundled bank (`assets/optometry.txt`, 146 facts) |
+| `optometry` | eye-care domain facts | bundled bank (`assets/optometry.txt`, 146 facts) |
+| `knowledge` | general world knowledge | `assets/knowledge/` banks: offline seed + **Wikipedia crawl** (via Actions) |
 
-**Adding your own skill is 3 steps:** write a `question|||answer` bank (or a
-generator) in `assets/`, register the name in `SKILL_NAMES` + a template in
-`data.py`, run training. A fresh expert block is created automatically.
-
-## Download a trained model
-
-**Releases page** (no build needed): grab `model.pt` + `tokenizer.json` from
-[Releases](https://github.com/stromplayz/modular-lm/releases) and drop them in
-a `ckpt/` folder:
+### Add a new skill WITHOUT touching the main model
 
 ```bash
-git clone https://github.com/stromplayz/modular-lm.git && cd modular-lm
-pip install torch numpy --index-url https://download.pytorch.org/whl/cpu
-pip install -e .
-mkdir ckpt && cd ckpt
-# download model.pt + tokenizer.json from the Releases page into here
-cd ..
-python -m skill_lm.generate --demo
+# 1. facts bank (Q ||| A lines) - write it, or crawl wiki into it
+python -m skill_lm.ingest --offline          # or Actions: ingest-wiki workflow
+
+# 2. train ONE pack against the frozen trunk (~7 min CPU)
+python -m skill_lm.train_pack --name myskill --facts assets/myskill.txt
+
+# 3. use it immediately, co-loaded with the others
+python -m skill_lm.serve --packs qa myskill --ask "..."
 ```
 
-Or get everything (code + latest checkpoint) with a plain clone - the trained
-checkpoint is committed to `ckpt/` by the training workflow.
+Nothing else changes. No retraining. No forgetting. Push the pack file and
+everyone can fetch it from the hub.
 
-## Quick start
+## Use the runtime (fetch-on-demand + deload)
+
+```bash
+python -m skill_lm.serve --demo                 # co-load all packs, demo each
+python -m skill_lm.serve --ask "What is the largest ocean on Earth?"
+python -m skill_lm.serve --repl                 # interactive
+#   ask> :load optometry      <- fetch + load from GitHub hub on demand
+#   ask> :deload optometry    <- drop from RAM
+```
+
+Browse the hub:
+
+```bash
+python -m skill_lm.hub --list                   # remote + cached packs
+python -m skill_lm.hub --fetch knowledge        # cache a pack for offline use
+```
+
+Programmatic:
+
+```python
+from skill_lm.hub import Hub
+hub = Hub("stromplayz/modular-lm")
+mixer = hub.load_mixer("ckpt/trunk.pt", ["qa", "knowledge"])
+out, used_pack = mixer.generate(ids, pack=None)  # auto-route among loaded
+mixer.drop_pack("knowledge")                     # deload
+```
+
+## Quick start (legacy monolith)
 
 ```bash
 pip install -e ".[dev]"
-pytest                      # full test suite
+pytest                      # full test suite (31 tests)
 
-# train (CPU-friendly; ~55 min budget by default)
-python -m skill_lm.train --steps 4000 --out ckpt
+# v6 genesis: split the v5 checkpoint into trunk + packs (one-time)
+python -m skill_lm.genesis --story-mb 3.0
 
-# chat / demo — the router picks the skill automatically
-python -m skill_lm.generate --demo
-python -m skill_lm.generate --prompt "Compute: 12 + 34"
-python -m skill_lm.generate --prompt "Q: What is the capital of Japan?" --skill qa
-python -m skill_lm.generate --prompt "Eye Q: What does OD mean on a prescription?" --skill optometry
+# train a pack
+python -m skill_lm.train_pack --name knowledge \
+    --facts assets/knowledge/wiki_facts.txt \
+    --eval-facts assets/knowledge/wiki_facts_eval.txt
+
+# LUA benchmark with zero-forgetting check
+python -m skill_lm.bench_lua
+
+# int8 export (~3.7x smaller packs)
+python -m skill_lm.export_pack --all
 ```
 
 ## Train on GitHub Actions (free compute)
 
-`Actions -> train -> Run workflow` — the workflow trains the model on a free
-GitHub runner and uploads `model.pt`, `tokenizer.json`, `samples.txt` and the
-training CSV as artifacts. Re-run with more steps any time.
+| Workflow | What it does |
+|---|---|
+| `train` | legacy monolith training |
+| `ingest-wiki` | crawls Wikipedia from clean runner IPs, mines QA facts, commits the banks |
+| `train-pack` | trains ONE pack against the frozen trunk, runs the LUA benchmark, commits the pack to the hub |
+
+Typical loop: run `ingest-wiki` (grows the fact banks) -> run `train-pack`
+(knowledge pack absorbs the new facts) -> pack lands in `packs/` -> the hub
+serves it to every client. The main model was trained once and stays frozen.
 
 ## Design notes
 
@@ -135,50 +178,36 @@ training CSV as artifacts. Re-run with more steps any time.
 ```
 skill_lm/
   tokenizer.py   from-scratch byte-level BPE (GPT-2 style pre-tokenization)
-  model.py       SkillModularLM: trunk + router + skill experts + generate
-  data.py        skill corpora: TinyStories download, facts banks, generators
-  train.py       round-robin skill training, per-skill eval, sample writing
-  generate.py    chat CLI with router visibility
-  benchmark.py   per-skill exact-match benchmark CLI
-assets/facts.txt      general QA facts bank
-assets/optometry.txt  optometry facts bank (146 facts)
-tests/           tokenizer, model, data, overfit tests
+  model.py       SkillModularLM (v5 monolith: trunk + router + experts)
+  frozen.py      v6 FrozenCore: TrunkModel (frozen) + SkillPack + SkillMixer
+  genesis.py     one-time split: v5 ckpt -> trunk + packs + router heads
+  train_pack.py  train ONE pack against the frozen trunk (LM + router)
+  hub.py         GitHub pack hub: list / fetch / cache / load / deload
+  stream.py      HTTP-Range slicer: sample MBs out of 40GB+ datasets
+  ingest.py      Wikipedia crawler + regex QA miner -> fact banks
+  serve.py       runtime CLI: co-load packs, ask, :load/:deload
+  bench_lua.py   Language Understanding & Answering bench + forgetting check
+  export_pack.py int8 pack export (~3.7x smaller)
+  data.py / train.py / generate.py / benchmark.py   (v5 pipeline)
+packs/           THE HUB - one file per skill pack (fetchable by URL)
+ckpt/            trunk.pt (frozen) + v5 monolith ckpt + tokenizer + baselines
+assets/          fact banks (facts, optometry, knowledge/)
+.devcontainer/   one-click Codespaces: installs torch, runs tests
+tests/           31 tests: tokenizer, model, frozen core, packs, ingestion
 ```
-
-## Measured results (v0.2.0 release, 5 skills @ 6000 steps, 936K params)
-
-Exact-match benchmarks on fresh, unseen prompts (`python -m skill_lm.benchmark`):
-
-| Skill | Accuracy | Notes |
-|---|---|---|
-| `optometry` | **97.3%** | 142/146 eye-care facts: anatomy, refractive errors, conditions, tests, prescriptions |
-| `math` | 90.7% | addition 90%, subtraction 80%, multiplication **100%** (v0.1.0 4-skill model scored 97.3% - the 5th expert trades a few points) |
-| `qa`   | **99.1%**  | capitals, science, days/months |
-| `count`| **100%**  | all 89 words: letter counts + first letters |
-| `router`| loads the right expert | eye questions with the **Eye Q: / Eye exam Q:** lead-in route to the optometry expert; plain `What is X?` between the two Q&A skills may lean qa - force with `--skill optometry` if needed |
-
-The router's live confidence is printed with every demo generation
-(`ROUTER : math [router correct] (probs: math=0.97, ...)`) and the benchmark
-tool prints per-operation breakdowns.
-
-**How math got to 97%**: tiny models cannot memorize 2-digit arithmetic from
-~1.6 exposures per (a, b) pair. Two data-side fixes did it:
-1. **Operand curriculum** - 50% of operands <= 12, 30% <= 29, 20% <= 99
-2. **Place-value scratchpad** - 60% of addition examples show the algorithm:
-   `23 + 45 -> "20 + 40 = 60. 3 + 5 = 8. 60 + 8 = 68."`
-   Each intermediate lives in a small learned space, so the model learns
-   *how to add*, not just answers.
 
 ## Status
 
 - [x] From-scratch BPE tokenizer
 - [x] Skill-Modular Transformer (trunk + 5 skill experts + router)
-- [x] Skill datasets + generators
-- [x] Training pipeline with per-skill eval + router accuracy
-- [x] Test suite (tokenizer round-trip, routing, dispatch, overfit)
-- [x] Local calibration run
-- [x] Trained checkpoints committed by Actions (v5: math 97.3%, qa 100%, count 100%)
-- [x] GitHub Actions training workflow
-- [ ] Longer community-scale training runs (open `train` workflow with more steps)
+- [x] **v6 FrozenCore: frozen trunk + 6 independently-trained packs**
+- [x] One-vs-rest router heads + joint calibration for co-loading
+- [x] GitHub pack hub (fetch on demand, cache, deload)
+- [x] Wikipedia ingestion pipeline (+ Actions workflow with clean IPs)
+- [x] Stream slicing for 40GB+ HF datasets (no full downloads)
+- [x] LUA benchmark with zero-forgetting verification
+- [x] int8 pack export (464 KB -> 124 KB per pack)
+- [x] 31-test suite incl. freeze/forgetting guarantees
+- [ ] Scale roadmap: wider trunk + more packs; int4; distillation (see bench_lua roadmap note)
 
 MIT License.

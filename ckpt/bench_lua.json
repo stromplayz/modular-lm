@@ -1,0 +1,30 @@
+{
+  "math": {
+    "ok": 62,
+    "n": 150
+  },
+  "count": {
+    "ok": 89,
+    "n": 89
+  },
+  "qa": {
+    "ok": 111,
+    "n": 111
+  },
+  "optometry": {
+    "ok": 146,
+    "n": 146
+  },
+  "knowledge_recall": {
+    "ok": 60,
+    "n": 60
+  },
+  "knowledge_heldout": {
+    "ok": 0,
+    "n": 22
+  },
+  "router": {
+    "ok": 171,
+    "n": 180
+  }
+}

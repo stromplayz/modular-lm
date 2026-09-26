@@ -1,0 +1,23 @@
+{
+  "name": "modular-lm",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "postCreateCommand": "pip install torch numpy --index-url https://download.pytorch.org/whl/cpu && pip install -e . && python -m pytest tests/ -q",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff"
+      ]
+    }
+  },
+  "remoteEnv": {
+    "MODULAR_LM_CACHE": "/workspaces/modular-lm/.pack-cache"
+  },
+  "comments": {
+    "postCreateCommand": "Installs CPU torch, the package editable, and runs the test suite so every Codespace is instantly trainable and testable."
+  }
+}

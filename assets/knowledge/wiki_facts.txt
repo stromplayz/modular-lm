@@ -1,0 +1,132 @@
+Which planet has the most prominent ring system? ||| Saturn
+Which planet spins on its side? ||| Uranus
+What is the hottest planet in the Solar System? ||| Venus
+How many moons does Mars have? ||| Two
+What is the Sun mostly made of? ||| Hydrogen and helium
+What force keeps planets in orbit around the Sun? ||| Gravity
+Which galaxy contains our Solar System? ||| The Milky Way
+What is the largest moon of Saturn? ||| Titan
+What is the largest moon of Jupiter? ||| Ganymede
+What is a shooting star actually? ||| A small meteor burning in the atmosphere
+What is the region beyond Neptune called? ||| The Kuiper Belt
+What spacecraft first landed humans on the Moon? ||| Apollo 11
+Who was the first woman in space? ||| Valentina Tereshkova
+Who was the first human to walk on the Moon? ||| Neil Armstrong
+What is the name of the first artificial satellite? ||| Sputnik 1
+What telescope launched in 1990 orbits Earth? ||| The Hubble Space Telescope
+What is at the center of the Milky Way? ||| A supermassive black hole
+What is the escape velocity of Earth about? ||| About 11 kilometers per second
+What gas do plants absorb from the air? ||| Carbon dioxide
+What gas makes up most of Earth's atmosphere? ||| Nitrogen
+What is the chemical symbol for iron? ||| Fe
+What is the chemical symbol for sodium? ||| Na
+What is the lightest element? ||| Hydrogen
+What particle has a negative charge? ||| The electron
+What is the center of an atom called? ||| The nucleus
+What is the speed of light in vacuum about? ||| About 300,000 kilometers per second
+What unit measures electrical resistance? ||| The ohm
+What unit measures electric current? ||| The ampere
+What unit measures force? ||| The newton
+What unit measures energy? ||| The joule
+What is the boiling point of water at sea level in Celsius? ||| 100 degrees
+What is the freezing point of water in Celsius? ||| 0 degrees
+What kind of wave is sound? ||| A mechanical wave
+What kind of radiation is used in airport scanners? ||| X-rays
+What metal is liquid at room temperature? ||| Mercury
+What is the most abundant gas in the universe? ||| Hydrogen
+What law says every action has an equal and opposite reaction? ||| Newton's third law
+What scientist proposed the theory of relativity? ||| Albert Einstein
+What famous equation equals mass times the speed of light squared? ||| E equals mc squared
+What scientist is famous for the law of gravity and calculus? ||| Isaac Newton
+What is the study of earthquakes called? ||| Seismology
+What is the largest ocean on Earth? ||| The Pacific Ocean
+What is the deepest place in the ocean? ||| The Mariana Trench
+What is the longest river in the world? ||| The Nile
+What is the largest river by water volume? ||| The Amazon
+What is the tallest mountain on Earth? ||| Mount Everest
+What is the largest desert on Earth? ||| Antarctica
+What is the largest hot desert? ||| The Sahara
+What layer of Earth lies beneath the crust? ||| The mantle
+What is the solid innermost layer of Earth? ||| The inner core
+What is a person who studies rocks called? ||| A geologist
+What causes the tides? ||| The gravity of the Moon and Sun
+What is frozen water vapor in clouds called? ||| Snow
+What instrument measures temperature? ||| A thermometer
+What is the water cycle driven by? ||| The Sun
+What is the largest island in the world? ||| Greenland
+What is the coldest continent? ||| Antarctica
+What is the largest country by area? ||| Russia
+What is the most populous country? ||| India
+What is the largest country in South America? ||| Brazil
+What waters are the saltiest? ||| The Dead Sea
+What line divides Earth into Northern and Southern hemispheres? ||| The Equator
+What organ pumps blood through the body? ||| The heart
+What organ filters blood to make urine? ||| The kidneys
+What is the largest organ of the human body? ||| The skin
+What organ produces insulin? ||| The pancreas
+How many bones does an adult human have? ||| 206
+What is the longest bone in the human body? ||| The femur
+What is the smallest bone in the human body? ||| The stapes
+How many chambers does the human heart have? ||| Four
+What blood cells fight infection? ||| White blood cells
+What pigment makes plants green? ||| Chlorophyll
+What part of the cell contains DNA? ||| The nucleus
+What is the powerhouse of the cell? ||| The mitochondria
+What molecule carries genetic instructions? ||| DNA
+How many chromosomes do humans have? ||| 46
+What is the largest animal ever known? ||| The blue whale
+What is the fastest bird? ||| The peregrine falcon
+What is the only mammal that can truly fly? ||| The bat
+What mammal lays eggs? ||| The platypus
+What is a group of lions called? ||| A pride
+What is a young kangaroo called? ||| A joey
+How many hearts does an octopus have? ||| Three
+What insect makes honey? ||| The honey bee
+What reptile changes color to blend in? ||| The chameleon
+What animal is known for its trunk? ||| The elephant
+What is the study of living things called? ||| Biology
+What is the study of birds called? ||| Ornithology
+What is the study of insects called? ||| Entomology
+What vitamin do we make in sunlight? ||| Vitamin D
+Who invented the commercially practical light bulb? ||| Thomas Edison
+Who invented the World Wide Web? ||| Tim Berners-Lee
+Who is considered the first computer programmer? ||| Ada Lovelace
+Who is called the father of computers? ||| Charles Babbage
+Who developed the first practical printing press in Europe? ||| Johannes Gutenberg
+What company created the iPhone? ||| Apple
+What does RAM stand for? ||| Random Access Memory
+What does HTTP stand for? ||| Hypertext Transfer Protocol
+What programming language is named after a snake? ||| Python
+What does WWW stand for? ||| The World Wide Web
+What year did the first iPhone launch? ||| 2007
+What is the brain of a computer? ||| The CPU
+What fuel powers most cars? ||| Gasoline
+What do solar panels convert sunlight into? ||| Electricity
+What is the most common use of wind turbines? ||| Generating electricity
+What metal is used in most rechargeable batteries? ||| Lithium
+What did the Wright brothers invent? ||| The first powered airplane
+What did Karl Benz invent? ||| The first practical automobile
+What did Alexander Fleming discover? ||| Penicillin
+What did Edward Jenner pioneer? ||| The smallpox vaccine
+What did Marie Curie study? ||| Radioactivity
+What did Charles Darwin propose? ||| Evolution by natural selection
+What did Galileo improve? ||| The telescope
+What did Benjamin Franklin famously study with a kite? ||| Electricity and lightning
+What number is neither prime nor composite? ||| One
+What is the only even prime number? ||| Two
+What is the value of pi about? ||| 3.14
+What do you call a triangle with three equal sides? ||| An equilateral triangle
+How many degrees are in a full circle? ||| 360
+How many sides does a hexagon have? ||| Six
+How many minutes are in a day? ||| 1440
+How many days are in a leap year? ||| 366
+What unit is 1000 meters? ||| A kilometer
+What unit is 100 centimeters? ||| A meter
+What unit is 1000 grams? ||| A kilogram
+How many quarts are in a gallon? ||| Four
+What is the bottom number of a fraction called? ||| The denominator
+What do you call the answer to a multiplication problem? ||| The product
+What do you call the answer to an addition problem? ||| The sum
+What do you call the answer to a subtraction problem? ||| The difference
+What do you call the answer to a division problem? ||| The quotient
+What shape has all points equidistant from its center? ||| A circle
