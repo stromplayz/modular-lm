@@ -160,8 +160,7 @@ def mine_facts(text: str) -> list[tuple[str, str, str]]:
                     continue
                 if len(a.split()) > 10 or _BAD_Y.search(a):
                     continue
-                if _BAD_X.search(q.split("is ", 1)[-1].split("was ", 1)[-1]
-                                  .split("died", 1)[0].strip() or ""):
+                if _BAD_X.search(sent):   # pronoun/clause openers never make subjects
                     continue
                 if _BAD_Q.search(q.split("?", 1)[0].split()[-1] if q else ""):
                     continue
