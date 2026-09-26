@@ -1,0 +1,801 @@
+The cornea has five layers: the epithelium, Bowman's layer, the stroma, Descemet's membrane, and the endothelium.
+
+The average central corneal thickness is about 540 micrometers.
+
+Descemet's membrane is the thinnest layer of the cornea.
+
+The stroma makes up about 90 percent of the corneal thickness.
+
+Young adults have about 3,500 corneal endothelial cells per square millimeter.
+
+Corneal endothelial cells do not divide, so cell loss is permanent.
+
+The cornea provides about 43 diopters, roughly two thirds of the eye's refractive power.
+
+The cornea stays transparent because of its regular collagen lattice and relative dehydration.
+
+The cornea is avascular and is nourished by aqueous humor and tears.
+
+The cornea receives sensory innervation from the ophthalmic division of the trigeminal nerve.
+
+The sclera covers the posterior five sixths of the eyeball.
+
+The limbus is the junction between the cornea and the sclera.
+
+The trabecular meshwork and the canal of Schlemm sit at the limbus.
+
+Aqueous humor drains through the trabecular meshwork into the canal of Schlemm.
+
+The ciliary body epithelium produces aqueous humor.
+
+The anterior chamber holds about 250 microliters of aqueous humor.
+
+The posterior chamber lies between the posterior iris surface and the lens zonules.
+
+The vitreous chamber holds about 4 milliliters of vitreous.
+
+The retina has ten layers.
+
+The macula is a 5.5 millimeter area at the posterior pole for central vision.
+
+The fovea is the central pit of the macula with the highest cone density.
+
+The foveal avascular zone at the fovea center is free of blood vessels.
+
+The human retina contains about 120 million rods.
+
+The human retina contains about 6 million cones.
+
+Rods mediate scotopic, or night, vision.
+
+Cones mediate photopic and color vision.
+
+Cone density peaks at the fovea.
+
+The optic disc is the blind spot because it has no photoreceptors.
+
+The normal cup to disc ratio is about 0.3.
+
+The optic nerve is cranial nerve II.
+
+The optic nerve carries about 1.2 million retinal ganglion cell axons.
+
+The choroid supplies the outer retina.
+
+The central retinal artery arises from the ophthalmic artery.
+
+Six extraocular muscles move each eye.
+
+The abducens nerve, CN VI, innervates the lateral rectus.
+
+The trochlear nerve, CN IV, innervates the superior oblique.
+
+The oculomotor nerve innervates the medial rectus, superior rectus, inferior rectus, inferior oblique, and levator.
+
+The primary action of the lateral rectus is abduction.
+
+The primary action of the medial rectus is adduction.
+
+The primary action of the superior rectus is elevation.
+
+The primary action of the inferior rectus is depression.
+
+The primary action of the superior oblique is intorsion.
+
+The primary action of the inferior oblique is extorsion.
+
+The levator palpebrae superioris raises the upper eyelid.
+
+Muller's muscle, the superior tarsal muscle, assists upper lid elevation.
+
+The orbicularis oculi closes the eyelids.
+
+The facial nerve, CN VII, innervates the orbicularis oculi.
+
+The tear film has three layers: lipid, aqueous, and mucin.
+
+The meibomian glands secrete the lipid layer of the tear film.
+
+Conjunctival goblet cells secrete the mucin layer of the tear film.
+
+The main lacrimal gland sits in the superotemporal orbit.
+
+Tears drain through the nasolacrimal duct into the inferior meatus.
+
+The normal blink rate is about 15 to 20 blinks per minute.
+
+The iris sphincter muscle constricts the pupil.
+
+The iris dilator muscle dilates the pupil.
+
+Parasympathetic fibers via CN III control the iris sphincter.
+
+The pupil ranges between 2 and 8 millimeters depending on lighting.
+
+Anisocoria up to 1 millimeter can be physiologic.
+
+The crystalline lens is biconvex and transparent.
+
+The lens grows throughout life as new fibers are added.
+
+The zonular fibers of Zinn hold the lens in place.
+
+During accommodation the ciliary muscle contracts, the zonules slacken, and the lens rounds up.
+
+Presbyopia is age related loss of accommodation noticed in the early forties.
+
+The retinal pigment epithelium phagocytoses shed photoreceptor outer segments.
+
+Rods contain the visual pigment rhodopsin.
+
+Nasal retinal fibers cross at the chiasm while temporal fibers stay ipsilateral.
+
+The optic tract terminates in the lateral geniculate nucleus.
+
+Primary visual input reaches V1 along the calcarine fissure.
+
+Meyer's loop in the temporal lobe carries inferior field fibers, so lesions lift the visual field.
+
+The afferent limb of the light reflex is the optic nerve.
+
+The efferent limb of the light reflex travels on CN III.
+
+The corneal reflex has an afferent CN V1 limb and an efferent CN VII limb.
+
+Bell's phenomenon is the upward rotation of the eyes during forced closure.
+
+The upper lid has about 25 meibomian glands.
+
+The average adult axial length is about 23.5 to 24 millimeters.
+
+Each millimeter of axial elongation adds about 2.5 to 3 diopters of myopia.
+
+The adult globe has a volume of about 6.5 milliliters.
+
+The palpebral conjunctiva lines the eyelids.
+
+Prentice's rule states that induced prism equals decentration in centimeters times lens power.
+
+To transpose a prescription you add the cylinder to the sphere, flip the cylinder sign, and rotate the axis 90 degrees.
+
+The spherical equivalent equals the sphere plus half the cylinder.
+
+Effective power equals the lens power divided by one minus the vertex distance in meters times the power.
+
+The average spectacle vertex distance is about 12 millimeters.
+
+One prism diopter deviates light 1 centimeter at 1 meter, about 0.57 degrees.
+
+Reading at 40 centimeters requires 2.50 diopters of accommodation.
+
+A normal AC/A ratio is about 3 prism diopters per diopter of accommodation.
+
+A clearer red duochrome target means the eye is under-minused.
+
+A clearer green duochrome target means the eye is over-minused.
+
+A 20/20 letter subtends 5 minutes of arc with 1 minute strokes.
+
+A logMAR acuity of 0.0 equals 20/20.
+
+Each ETDRS letter is worth 0.02 logMAR.
+
+The minimum angle of resolution at 20/40 is 2 minutes, logMAR 0.30.
+
+A pinhole improves blur by increasing depth of focus.
+
+Vision that a pinhole cannot improve suggests pathology rather than refractive error.
+
+The circle of least diffusion sits between the two focal lines of the Sturm conoid.
+
+With motion on retinoscopy means you should add plus power.
+
+Against motion on retinoscopy means you should add minus power.
+
+A +2.00 diopter working distance lens compensates at 50 centimeters.
+
+A +1.50 diopter working distance lens compensates at 67 centimeters.
+
+Fogging relaxes accommodation by deliberately over-plussing the eye.
+
+With-the-rule astigmatism has its minus cylinder axis near 180 degrees.
+
+Against-the-rule astigmatism has its minus cylinder axis near 90 degrees.
+
+On a clock dial chart the faintest hour times 30 degrees gives the axis.
+
+The Jackson cross cylinder refines cylinder axis first and then power.
+
+You chase the red dots when refining axis with the JCC.
+
+The Abbe number measures dispersion, and higher values mean less chromatic aberration.
+
+CR-39 has an Abbe value of about 58.
+
+Polycarbonate has an Abbe value of about 30.
+
+CR-39 has a refractive index of 1.498.
+
+The highest common lens index is 1.74.
+
+A prism deviates light toward its base and the seen image shifts toward its apex.
+
+A right hyperphoria is compensated base down before the right eye or base up before the left.
+
+Slab-off grinding adds base-up prism to the more minus lens to fix vertical imbalance.
+
+Prism thinning adds base-down prism to slim progressive lenses.
+
+Spectacles are fitted with about 8 to 12 degrees of pantoscopic tilt.
+
+Decentration per lens equals half the frame PD minus the monocular PD.
+
+Four millimeters of decentration on a 5 diopter lens induces 2 prism diopters by Prentice's rule.
+
+Spectacle magnification is the product of the power factor and the shape factor.
+
+Aniseikonia usually becomes symptomatic near a 3 percent image size difference.
+
+Contact lenses give myopes a larger retinal image than spectacles do.
+
+High powered lenses create a ring scotoma that causes the jack-in-the-box effect.
+
+Vogel's rule for plus lenses sets the base curve at the spherical equivalent plus 6 diopters.
+
+The add is the extra plus power a presbyope needs at near.
+
+A practical add is the dioptric working distance minus half the accommodative amplitude.
+
+Fresnel prisms are thin press-on sheets that avoid grinding prism into the lens.
+
+Polarized lenses block horizontally polarized glare such as water reflections.
+
+The FL-41 rose tint helps migraine and blepharospasm photophobia.
+
+Contrast sensitivity can reveal loss when standard acuity looks normal.
+
+Normal Pelli-Robson contrast sensitivity is about 1.65 log units or better.
+
+The potential acuity meter estimates retinal potential through media opacity.
+
+Snellen acuity is test distance divided by the distance where the letter subtends 5 minutes.
+
+A keratometer infers corneal curvature from reflected mire image size.
+
+Sagittal depth increases as the base curve steepens.
+
+Sagittal depth increases with larger lens diameter.
+
+The average near point of convergence is 6 to 10 centimeters.
+
+Vergence amplitude is the total convergence and divergence range.
+
+Normal near positive fusional vergence breaks around 24 prism diopters base out.
+
+Sheard's criterion demands fusional reserves of at least twice the phoria.
+
+Slow fixational drift is corrected by microsaccades.
+
+Duochrome balances red and green to avoid over-minusing.
+
+The near point of accommodation is the closest clearly focused point.
+
+Hofstetter's average amplitude formula is 18.5 minus 0.3 times age.
+
+Subjective refraction starts with monocular best vision sphere.
+
+Monocular refraction finds each endpoint before fusion alters accommodation.
+
+Maximum plus to maximum VA keeps the endpoint clearest with least minus.
+
+Maximum plus maximum VA is the strongest plus that keeps best acuity.
+
+A level phoropter avoids induced cylinder and prism from tilt.
+
+Subjective astigmatism refinement runs axis, then power, then sphere.
+
+Binocular balance equalizes accommodation between both eyes.
+
+A 3 to 4 prism diopter vertical prism dissociates the eyes for balance.
+
+Cycloplegia paralyzes the ciliary muscle using drops like cyclopentolate.
+
+Cycloplegic refraction matters most in children and hyperopes.
+
+Myopia focuses light in front of the retina and blurs distance vision.
+
+Hyperopia focuses light behind the retina.
+
+Astigmatism gives different power in different meridians.
+
+Progressive lenses are simultaneous vision lenses with distance to near zones.
+
+Leave duochrome slightly red to protect against over-minusing.
+
+Retinoscopy measures refractive error from the pupillary light reflex.
+
+A scissored reflex hints at irregular astigmatism like keratoconus.
+
+A dim peripheral reflex suggests small pupil or media opacity.
+
+Trial frames sit about 12 to 14 millimeters from the cornea.
+
+Equal plus blur in both eyes signals balanced relaxed accommodation.
+
+Humphriss immediate contrast balances binocularly with fogging plus duochrome.
+
+Anisometropia is an interocular difference in refractive error.
+
+Antimetropia is myopia in one eye and hyperopia in the other.
+
+Contact lenses reduce magnification mismatch in anisometropia.
+
+Pulling plus means removing minus until the first blur.
+
+Red focusing closer than green can flag over-minusing.
+
+Normal intraocular pressure runs from 10 to 21 millimeters of mercury.
+
+Age and family history are major glaucoma risk factors beyond IOP.
+
+Prostaglandin analogs like latanoprost are first line for open angle glaucoma.
+
+Latanoprost can cause hyperemia, lash growth, and iris darkening.
+
+Angle closure risk means a shallow angle seen on gonioscopy.
+
+Laser peripheral iridotomy relieves pupillary block.
+
+Normal tension glaucoma damages the optic nerve despite normal IOP.
+
+Glaucoma shows focal rim thinning, notching, and disc hemorrhages.
+
+Humphrey 24-2 SITA perimetry tracks glaucoma fields.
+
+OCT quantifies RNFL and ganglion cell loss in glaucoma.
+
+A cataract is an opacity of the crystalline lens.
+
+Posterior subcapsular cataracts link to diabetes and steroid use.
+
+Nuclear sclerotic cataracts cause glare and a myopic shift.
+
+Cortical cataracts show wedge-like spokes.
+
+Cataract surgery replaces the cloudy lens with an intraocular lens.
+
+Drusen are extracellular deposits under the RPE in AMD.
+
+The AREDS2 formula with lutein and zeaxanthin slows dry AMD.
+
+Wet AMD means choroidal neovascularization leaks fluid or blood.
+
+Anti-VEGF intravitreal injections treat wet AMD.
+
+Patients self-check distortion with the Amsler grid.
+
+Microaneurysms and dot-blot hemorrhages start diabetic retinopathy.
+
+Neovascularization defines proliferative diabetic retinopathy.
+
+Panretinal photocoagulation treats proliferative diabetic retinopathy.
+
+Diabetic patients need a dilated exam at least yearly.
+
+CSME is treated with anti-VEGF or focal laser.
+
+AV nicking and cotton wool spots mark hypertensive retinopathy.
+
+A cotton wool spot is a nerve fiber layer infarct.
+
+Retinal detachment causes flashes, floaters, and a curtain shade.
+
+Lattice degeneration predisposes to retinal tears.
+
+CRAO shows sudden painless loss with a cherry red spot.
+
+CRAO salvage window is roughly the first 90 to 240 minutes.
+
+CRVO gives widespread flame hemorrhages, the blood and thunder fundus.
+
+Viral conjunctivitis is the most common red eye cause.
+
+Watery discharge plus a preauricular node suggests viral conjunctivitis.
+
+Purulent discharge points to bacterial conjunctivitis.
+
+Itching is the hallmark of allergic conjunctivitis.
+
+Cobblestone papillae indicate allergic reaction.
+
+Horner-Trantas dots mark limbal vernal keratoconjunctivitis.
+
+Blepharitis is chronic inflammation of the lid margins.
+
+Warm compresses and lid hygiene anchor blepharitis care.
+
+A hordeolum is an acute lid gland abscess.
+
+A chalazion is a chronic sterile meibomian granuloma.
+
+HSV keratitis stains as a branching dendritic ulcer.
+
+Steroids alone worsen epithelial herpes simplex keratitis.
+
+Keratoconus is progressive cone-like corneal ectasia.
+
+Keratoconus shows a Fleischer iron ring at the cone base.
+
+Vogt's striae are vertical stress lines in keratoconus.
+
+Collagen cross-linking halts keratoconus progression.
+
+Munson's sign is the V shaped lower lid in downgaze.
+
+A pterygium is a fibrovascular wing crossing onto the cornea.
+
+A pinguecula is a yellowish limbal conjunctival deposit.
+
+Anterior uveitis inflames iris and ciliary body.
+
+Ciliary flush with photophobia suggests uveitis.
+
+Anterior chamber cells and flare mark active uveitis.
+
+Episcleritis is benign sectoral inflammation that blanches with phenylephrine.
+
+Scleritis is painful deep inflammation that does not blanch.
+
+Scleritis is often linked to rheumatoid arthritis.
+
+Subconjunctival hemorrhage is painless and self limited.
+
+Dry eye disease is keratoconjunctivitis sicca.
+
+TBUT under 10 seconds signals tear film instability.
+
+Schirmer wetting under 5 millimeters means severe aqueous deficiency.
+
+Lissamine green stains devitalized cells and mucus.
+
+Vitamin A deficiency causes night blindness and Bitot spots.
+
+Retinitis pigmentosa is an inherited rod-cone degeneration.
+
+Bone spicule pigment clumps typify retinitis pigmentosa.
+
+Migraine aura is a spreading scintillating scotoma under an hour.
+
+GCA adds jaw claudication and scalp tenderness to transient vision loss.
+
+ESR and CRP track giant cell arteritis.
+
+External styes usually come from staphylococcal follicle infection.
+
+Photokeratitis is UV corneal injury like snow blindness.
+
+Arcus senilis is a peripheral corneal lipid ring.
+
+Arcus in the young warrants a lipid workup.
+
+Kayser-Fleischer rings are copper deposits in Wilson disease.
+
+A hypopyon is layered white cells in the anterior chamber.
+
+A hyphema is blood layering in the anterior chamber.
+
+Aspirin and anticoagulants worsen hyphema bleeding.
+
+Papilledema is disc swelling from raised intracranial pressure.
+
+Idiopathic intracranial hypertension raises ICP and swells discs.
+
+Optic neuritis causes pain on eye movement and dyschromatopsia.
+
+Red desaturation is an early optic neuritis sign.
+
+LHON is mitochondrial, striking young men with central loss.
+
+Cataract remains the leading cause of blindness worldwide.
+
+Glaucoma leads irreversible blindness in working-age adults.
+
+Congenital toxoplasmosis scars the retina with systemic signs.
+
+Leukocoria in an infant must exclude retinoblastoma.
+
+Galactosemia causes oil drop cataracts in infants.
+
+Thyroid eye disease is Graves orbitopathy.
+
+Graves orbitopathy thickens inferior and medial recti early.
+
+Sympathetic overactivity retracts lids and delays their descent.
+
+Tamsulosin causes intraoperative floppy iris syndrome.
+
+Ethambutol can cause toxic optic neuropathy.
+
+Hydroxychloroquine needs baseline fields and OCT.
+
+Late hydroxychloroquine toxicity rings the fovea as bull's eye maculopathy.
+
+Topiramate can trigger acute myopia with angle closure.
+
+Isotretinoin dries the eye and affects night vision.
+
+Cyclophosphamide can irritate ocular surfaces at high doses.
+
+Conjunctivochalasis is a redundant conjunctival fold.
+
+Ectropion is an outward turning eyelid.
+
+Entropion turns the lid inward so lashes abrade the eye.
+
+Trichiasis is misdirected lashes abrading the globe.
+
+Dermatochalasis is redundant hanging lid skin.
+
+Ptosis is drooping of the upper lid.
+
+Myasthenic ptosis fatigues as the day goes on.
+
+Adie tonic pupil shows light-near dissociation.
+
+Apraclonidine reversal confirms Horner syndrome.
+
+Anisocoria means unequal pupils.
+
+Nystagmus is rhythmic involuntary eye oscillation.
+
+Vertical or torsional nystagmus suggests neurologic cause.
+
+The base curve is the radius of the back central optic zone of a lens.
+
+Most soft lenses use a base curve near 8.4 millimeters.
+
+Dk expresses how permeable a lens material is to oxygen.
+
+Dk over t is oxygen transmissibility through the actual lens.
+
+Silicone hydrogel transmits far more oxygen through silicon channels.
+
+Soft lens diameters cover the HVID plus 1 to 2 millimeters.
+
+Soft lenses should move 0.5 to 1 millimeter per blink.
+
+Tight fits show reduced movement with staining rings.
+
+Loose lenses cause fluctuating vision from edge lift.
+
+Fluorescein shows the tear layer pool under an RGP lens.
+
+Central pooling means the RGP is too steep.
+
+Central touch means the RGP is too flat.
+
+Ortho-k reshapes epithelium to create peripheral myopic defocus.
+
+Alternating design bifocals stack distance and near rings.
+
+Simultaneous vision multifocals superimpose distance and near focus.
+
+Scleral lenses vault the irregular cornea on a tear reservoir.
+
+Three and nine o'clock staining signals limbal interaction with RGP edges.
+
+GPC arises from deposits plus mechanical lens irritation.
+
+Daily disposables are worn once and discarded.
+
+Water contact and poor hygiene raise Acanthamoeba and Fusarium risk.
+
+A painful red photophobic eye in a wearer means possible microbial keratitis.
+
+Overnight hypoxia raises microbial keratitis risk.
+
+Above 4 diopters, contact power needs vertex conversion.
+
+A 4 D minus spectacle power is about 3.88 D at the corneal plane.
+
+MiSight dual focus lenses are FDA approved for myopia control.
+
+Myopia control lenses add peripheral myopic defocus.
+
+Scleral comfort depends on limbal clearance and edge design.
+
+Tropicamide is the fastest, shortest mydriatic.
+
+Tropicamide dilation lasts about 4 to 6 hours.
+
+Atropine gives long cycloplegia for uveitis comfort.
+
+Cyclopentolate peaks in 30 to 60 minutes.
+
+Phenylephrine 2.5 percent dilates with little cycloplegia.
+
+Timolol lowers IOP by reducing aqueous production.
+
+Timolol is contraindicated in asthma and bradycardia.
+
+Prostaglandin analogs boost uveoscleral outflow.
+
+Brimonidine acts on alpha-2 receptors for both effects.
+
+Dorzolamide is a topical carbonic anhydrase inhibitor.
+
+Dorzolamide may cross react in sulfa allergy.
+
+Pilocarpine constricts the pupil and ciliary muscle.
+
+Proparacaine 0.5 percent numbs for tonometry.
+
+Home anesthetic use causes toxic corneal damage.
+
+Fluorescein highlights epithelial defects under cobalt blue.
+
+Ganciclovir gel treats epithelial HSV keratitis.
+
+Amoxicillin-clavulanate covers preseptal cellulitis.
+
+Fourth generation fluoroquinolones cover Pseudomonas ulcers.
+
+Long steroids raise IOP, cloud the lens, and risk infection.
+
+Olopatadine stabilizes mast cells and blocks histamine.
+
+Allergy itch responds to dual action drops plus cold compresses.
+
+Alpha-1 blockers predispose to intraoperative floppy iris.
+
+Latanoprost is refrigerated and reddens eyes.
+
+Benzalkonium chloride accumulates and irritates the surface.
+
+Newborns are typically mildly hyperopic by 2 to 3 diopters.
+
+Retinoscopy quantifies error in preverbal children.
+
+Red reflex screening catches opacities and retinoblastoma.
+
+Pseudoesotropia is the crossed-eye illusion from epicanthal folds.
+
+Hirschberg reflex plus cover test confirm true strabismus.
+
+Cover-uncover finds manifest tropias.
+
+Alternate cover reveals total phoria plus tropia.
+
+A phoria is latent until fusion breaks.
+
+A tropia is a constant manifest deviation.
+
+Amblyopia is reduced best corrected acuity from abnormal development.
+
+Anisometropia causes refractive amblyopia.
+
+Full correction alone often improves refractive amblyopia.
+
+Moderate amblyopia patches 2 to 6 hours daily.
+
+Atropine drops penalize the sound eye.
+
+Amblyopia responds best before age 8 with benefit to 12.
+
+HOTV and LEA symbols test preschool acuity.
+
+Teller cards measure infant acuity by preferential looking.
+
+Constant suppression of a turned eye causes strabismic amblyopia.
+
+Infantile esotropia starts before 6 months.
+
+Accommodative esotropia resolves with hyperopic correction.
+
+A +2.50 add controls near accommodative esotropia.
+
+Blepharophimosis gives small lids with ptosis.
+
+Adult level acuity and stereo mature near age 6.
+
+Stereoacuity is the finest binocular depth disparity seen.
+
+Titmus stereoacuity bottoms out near 40 arc seconds.
+
+Suppression avoids double vision but blocks binocularity.
+
+Randot testing uses random dot polarized targets.
+
+CI shows near exophoria with low PFV and receded NPC.
+
+Office vergence therapy is the proven CI treatment.
+
+CI causes end of day reading blur and diplopia.
+
+NPC normally breaks near 6 to 10 centimeters.
+
+Vergence facility flips base-in base-out near 15 cycles per minute.
+
+NRA is about +2.50 of relative plus at near.
+
+PRA is about -2.25 of relative minus at near.
+
+Hering's law sends equal innervation to yoke muscles.
+
+Sherrington's law pairs agonist inhibition with antagonist relaxation.
+
+DVD is an upward drift when an eye is covered.
+
+Brown syndrome restricts adducted elevation via SO tendon.
+
+Duane syndrome retracts the globe on attempted adduction.
+
+Legal blindness is 20/200 or worse or 20 degree fields.
+
+A 16 D loupe magnifies 4 times, diopters over four.
+
+Kestenbaum's rule sets add as the acuity denominator over 100.
+
+Desktop CCTV magnifiers enlarge print on a screen.
+
+Field expanders compensate tubular RP fields.
+
+Angled glare-free task light aids low vision reading.
+
+High contrast marking aids daily tasks.
+
+Telescopes magnify at the cost of field.
+
+Goldmann flattens a 3.06 millimeter zone to estimate IOP.
+
+At 3.06 millimeters, rigidity and tear forces balance.
+
+Thin corneas make Goldmann underestimate IOP.
+
+Thick corneas and Valsalva inflate Goldmann IOP.
+
+Rebound tonometry reads IOP from probe deceleration.
+
+Van Herick compares peripheral chamber depth to corneal thickness.
+
+Van Herick grade 2 or less flags closure risk.
+
+Gonioscopy shows angle structures directly.
+
+Slit lamp methods span diffuse to sclerotic scatter.
+
+OCT maps macular layer thickness.
+
+FAF maps lipofuscin patterns of RPE health.
+
+A lensometer reads spectacle power and prism.
+
+Autorefractors give an objective refractive starting point.
+
+Fourth nerve palsy worsens contralateral downgaze diplopia.
+
+A pupillary third nerve palsy is an emergency workup.
+
+Painful sixth palsy warrants imaging.
+
+JXG pairs iris lesions with orange papules.
+
+Lisch nodules are iris hamartomas of NF1.
+
+Down syndrome shows cerulean lens dots.
+
+Wilson disease rings the cornea with copper.
+
+Palpebral conjunctiva pallor screens anemia.
+
+Sickle retinopathy shows salmon patch hemorrhages.
+
+Atopy and Down syndrome raise keratoconus risk.
+
+Bitot spots mark vitamin A deficiency.
+
+Retinal arteriolar change signals hypertensive damage.
+
+Most adults aim for HbA1c under 7 percent.
+
+Fenofibrate reduced DR progression in major trials.

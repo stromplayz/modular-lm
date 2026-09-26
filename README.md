@@ -15,6 +15,48 @@ in this repo, trained on free CPU compute (GitHub Actions).
 
 ---
 
+## v0.4.0 — 50-agent dataset forge + grammar/vocab pack + v7 "Aurora"
+
+**What's new** (see `docs/ARCHITECTURE.md` for the full study behind it):
+
+- **50-agent dataset forge** (`skill_lm/forge.py`) — 401 curated optometry
+  seed facts (anatomy, optics, refraction, disease, pharma, contacts,
+  pediatrics/BV, low vision) expanded by 50 parallel agents into
+  **2,915 train QA + 354 held-out + 401 LM statements** (canonical,
+  paraphrase, MCQ with domain distractors, true/false, cloze). The same
+  forge runs as a **50-job GitHub Actions matrix** in
+  `dataset-forge.yml` — each runner is one agent, artifacts merge, packs
+  train on the runners, the hub commits back.
+- **Real huge-dataset loading** (`skill_lm/hfdata.py`) — 3,500 grammar
+  correction pairs sampled out of `liweili/c4_200m` (**18.28M rows, GBs**)
+  via the HF datasets-server Rows API; only ~50 pages of 100 rows ever
+  moved. Feeds the grammar pack as LM text.
+- **New `grammar` pack** — 230 advanced vocabulary words (definition /
+  synonym / reverse / MCQ) + 17 programmatic grammar-rule families
+  (agreement, irregular past, comparatives, much/many, your/you're,
+  their/there/they're, then/than, fewer/less, prepositions, ...) +
+  dictionary-style LM lines. Distinctive `Lang Q:` surface.
+- **Optometry pack v2** — retrained on the forge bank with a distinctive
+  `Eye Q:` surface, MTP-lite aux loss (DeepSeek-V3-style, zero params),
+  joint router calibration (others frozen). Coverage **19x** the v1 bank;
+  first-ever held-out generalization at this scale.
+- **v7 "Aurora" module** (`skill_lm/v7.py`, public-SOTA-derived):
+  `SkillMixerV2` sigmoid top-2 gating + auxiliary-loss-free balance bias;
+  YaRN-style RoPE extension for packs; SwiGLU expert (pack format v2
+  preview); **int4 groupwise pack export** (453 KB -> **68 KB**, verified
+  round-trip). All provenance is public papers/open weights — no leaked or
+  proprietary files.
+- **Chunk-resumable pack training** (`train_pack --chunk-minutes/--resume`)
+  — optimizer + step state checkpointed every 500 steps; long runs survive
+  anywhere (Actions, Codespaces, a phone via Termux).
+
+LUA benchmark (7 packs co-loaded, zero-forgetting verified):
+qa 100% · count 100% · knowledge recall 100% · math 50.7% ·
+optometry core ~32-40% (19x bank, honest capacity math in the doc) ·
+grammar 72-78% · router 82-85%.
+
+---
+
 ## v0.3.0 — FrozenCore architecture
 
 **The main model never trains again.** All learning happens in pack files.

@@ -12,8 +12,24 @@
     "n": 111
   },
   "optometry": {
-    "ok": 146,
-    "n": 146
+    "ok": 38,
+    "n": 120
+  },
+  "optometry_forms": {
+    "ok": 24,
+    "n": 80
+  },
+  "optometry_heldout": {
+    "ok": 14,
+    "n": 80
+  },
+  "grammar": {
+    "ok": 72,
+    "n": 100
+  },
+  "grammar_heldout": {
+    "ok": 9,
+    "n": 80
   },
   "knowledge_recall": {
     "ok": 60,
@@ -25,6 +41,6 @@
   },
   "router": {
     "ok": 173,
-    "n": 180
+    "n": 210
   }
 }

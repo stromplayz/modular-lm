@@ -48,10 +48,11 @@ _TEMPLATES = [
 ]
 
 
-def gen_knowledge(rng: random.Random, facts: list[tuple[str, str]]) -> str:
+def gen_knowledge(rng: random.Random, facts: list[tuple[str, str]],
+                  templates: list[str] | None = None) -> str:
     q, a = rng.choice(facts)
-    # 3/4 distinctive knowledge lead-ins, 1/4 plain Q (content-level routing)
-    return _TEMPLATES[rng.randrange(4)].format(q=q, a=a)
+    tpl = templates or _TEMPLATES
+    return tpl[rng.randrange(len(tpl))].format(q=q, a=a)
 
 
 def get_batch(t: torch.Tensor, block: int, bs: int) -> tuple[torch.Tensor, torch.Tensor]:
@@ -79,6 +80,15 @@ def main(argv=None) -> None:
     p.add_argument("--name", required=True, help="pack name, e.g. knowledge")
     p.add_argument("--facts", required=True, help="facts bank: 'Q ||| A' lines")
     p.add_argument("--eval-facts", default=None, help="held-out facts for LUA eval")
+    p.add_argument("--extra-corpus", default=None,
+                   help="plain-text LM corpus mixed into pack training")
+    p.add_argument("--mtp", type=float, default=0.0,
+                   help="multi-token-prediction aux loss weight (DeepSeek-V3-style, "
+                        "predicts token t+2 from the SAME trunk head; zero new params)")
+    p.add_argument("--lead", default=None,
+                   help="custom QA lead templates, '|'-separated (e.g. "
+                        "'Eye Q: {q}\\nA: {a}.|Wiki Q: {q}\\nA: {a}.') - a "
+                        "distinctive surface per pack sharpens routing")
     p.add_argument("--trunk", default=os.path.join(REPO, "ckpt", "trunk.pt"))
     p.add_argument("--tokenizer", default=os.path.join(REPO, "ckpt", "tokenizer.json"))
     p.add_argument("--packs-dir", default=os.path.join(REPO, "packs"))
@@ -97,6 +107,11 @@ def main(argv=None) -> None:
                    help="expert dropout during pack training (0.0 = exact recall)")
     p.add_argument("--wd", type=float, default=0.01)
     p.add_argument("--max-minutes", type=float, default=45.0)
+    p.add_argument("--chunk-minutes", type=float, default=0.0,
+                   help="if >0: stop cleanly at this budget, save resume state, "
+                        "exit 42 - re-run the same command to continue")
+    p.add_argument("--resume", action="store_true",
+                   help="continue from packs/<name>.trainstate if present")
     args = p.parse_args(argv)
     torch.manual_seed(args.seed)
     rng = random.Random(args.seed)
@@ -111,14 +126,100 @@ def main(argv=None) -> None:
     # ------------------------------------------------------------------ #
     # 1. pack corpus
     # ------------------------------------------------------------------ #
-    corpus = "\n\n".join(gen_knowledge(rng, facts) for _ in range(args.n_examples)) + "\n\n"
+    leads = ([t.strip().replace("\\n", "\n") for t in args.lead.split("|")]
+             if args.lead else None)
+    corpus = "\n\n".join(gen_knowledge(rng, facts, leads)
+                          for _ in range(args.n_examples)) + "\n\n"
+    if args.extra_corpus and os.path.exists(args.extra_corpus):
+        extra = open(args.extra_corpus, encoding="utf-8").read().strip()
+        n_extra = len([s for s in extra.split("\n\n") if s.strip()])
+        corpus += "\n\n" + extra + "\n\n"
+        log(f"[data] extra LM corpus: {n_extra:,} blocks from {os.path.basename(args.extra_corpus)}")
     cache: dict = {}
-    t_train = fast_encode(tok, corpus, cache)
-    if len(t_train) < args.block + 2:
-        raise SystemExit("corpus too small - add more facts")
+    state_path = os.path.join(args.packs_dir, f"{args.name}.trainstate")
+    cache_path = state_path + ".corpus.pt"
+    if args.resume and os.path.exists(cache_path):
+        t_train = torch.load(cache_path, weights_only=True)
+        log(f"[data] corpus cache: {len(t_train):,} tokens (reused)")
+    else:
+        t_train = fast_encode(tok, corpus, cache)
+        if len(t_train) < args.block + 2:
+            raise SystemExit("corpus too small - add more facts")
+        if args.chunk_minutes > 0:
+            torch.save(t_train, cache_path)
     log(f"[data] pack corpus: {len(t_train):,} tokens")
 
-    # negatives for router training: other skills' corpora (cheap generators)
+    # negatives for router training are built AFTER LM training (only the
+    # router stage needs them) so resume chunks start fast
+
+    # ------------------------------------------------------------------ #
+    # 2. LM training - expert block only (trunk runs under no_grad)
+    # ------------------------------------------------------------------ #
+    pack = SkillPack(args.name, trunk.cfg,
+                     description=f"pack trained on {os.path.basename(args.facts)}")
+    opt = torch.optim.AdamW(
+        [{"params": [p for p in pack.expert.parameters() if p.dim() >= 2], "weight_decay": args.wd},
+         {"params": [p for p in pack.expert.parameters() if p.dim() < 2], "weight_decay": 0.0}],
+        lr=args.lr, betas=(0.9, 0.95))
+    start_step = 0
+    if args.resume and os.path.exists(state_path):
+        st = torch.load(state_path, map_location="cpu", weights_only=False)
+        pack.load_state_dict(st["expert"])
+        opt.load_state_dict(st["opt"])
+        start_step = st["step"]
+        log(f"[trn ] resumed from step {start_step}")
+    if args.dropout <= 0:
+        pack.expert.eval()  # disable dropout, gradients still flow (exact recall)
+        log("[trn ] expert dropout disabled (exact-recall mode)")
+
+    deadline = t0 + args.max_minutes * 60
+    chunk_deadline = (t0 + args.chunk_minutes * 60) if args.chunk_minutes > 0 else None
+    log(f"[trn ] LM training {args.steps} steps (expert block ONLY)")
+    if args.dropout > 0:
+        pack.train()
+    else:
+        pack.expert.eval()  # dropout stays OFF for exact recall
+    def save_state(step: int) -> None:
+        os.makedirs(args.packs_dir, exist_ok=True)
+        torch.save({"step": step, "expert": pack.state_dict(),
+                    "opt": opt.state_dict()}, state_path)
+    for step in range(start_step, args.steps):
+        if time.time() > deadline:
+            log(f"[trn ] time budget reached at step {step}")
+            break
+        if chunk_deadline is not None and time.time() > chunk_deadline:
+            save_state(step)
+            log(f"[trn ] chunk budget reached at step {step} - state saved")
+            print("RESUME_NEEDED", flush=True)
+            return
+        if step % 500 == 499:
+            save_state(step + 1)
+        lr = lr_at(step, args.warmup, args.steps, args.lr)
+        for g in opt.param_groups:
+            g["lr"] = lr
+        x, y = get_batch(t_train, args.block, args.batch)
+        with torch.no_grad():                       # <- main model never moves
+            h = trunk.hidden(x)
+        cos = trunk.rope_cos[:, : x.size(1)]
+        sin = trunk.rope_sin[:, : x.size(1)]
+        h = pack.expert(h.detach(), cos, sin)
+        logits = trunk.logits_from_h(h)
+        loss = F.cross_entropy(logits.view(-1, logits.size(-1)), y.reshape(-1),
+                               ignore_index=-100)
+        if args.mtp > 0:                            # MTP-lite: t+2 head, no new params
+            mtp = F.cross_entropy(logits[:, :-2].reshape(-1, logits.size(-1)),
+                                  y[:, 2:].reshape(-1), ignore_index=-100)
+            loss = loss + args.mtp * mtp
+        opt.zero_grad(set_to_none=True)
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(pack.expert.parameters(), 1.0)
+        opt.step()
+        if step % 50 == 0 or step == args.steps - 1:
+            log(f"step {step:>5} | lm_loss {loss.item():.3f} | lr {lr:.2e}")
+
+    # ------------------------------------------------------------------ #
+    # 3. router: BCE warm-start, then joint calibration (new head only moves)
+    # ------------------------------------------------------------------ #
     neg_texts: dict[str, str] = {}
     neg_texts["qa"] = "\n\n".join(
         D.gen_qa(rng, D.load_facts(os.path.join(REPO, "assets", "facts.txt")))
@@ -139,51 +240,6 @@ def main(argv=None) -> None:
             neg_tensors[nm] = t
             log(f"[data] negatives[{nm:<9}] {len(t):>9,} tokens")
 
-    # ------------------------------------------------------------------ #
-    # 2. LM training - expert block only (trunk runs under no_grad)
-    # ------------------------------------------------------------------ #
-    pack = SkillPack(args.name, trunk.cfg,
-                     description=f"pack trained on {os.path.basename(args.facts)}")
-    opt = torch.optim.AdamW(
-        [{"params": [p for p in pack.expert.parameters() if p.dim() >= 2], "weight_decay": args.wd},
-         {"params": [p for p in pack.expert.parameters() if p.dim() < 2], "weight_decay": 0.0}],
-        lr=args.lr, betas=(0.9, 0.95))
-    if args.dropout <= 0:
-        pack.expert.eval()  # disable dropout, gradients still flow (exact recall)
-        log("[trn ] expert dropout disabled (exact-recall mode)")
-
-    deadline = t0 + args.max_minutes * 60
-    log(f"[trn ] LM training {args.steps} steps (expert block ONLY)")
-    if args.dropout > 0:
-        pack.train()
-    else:
-        pack.expert.eval()  # dropout stays OFF for exact recall
-    for step in range(args.steps):
-        if time.time() > deadline:
-            log(f"[trn ] time budget reached at step {step}")
-            break
-        lr = lr_at(step, args.warmup, args.steps, args.lr)
-        for g in opt.param_groups:
-            g["lr"] = lr
-        x, y = get_batch(t_train, args.block, args.batch)
-        with torch.no_grad():                       # <- main model never moves
-            h = trunk.hidden(x)
-        cos = trunk.rope_cos[:, : x.size(1)]
-        sin = trunk.rope_sin[:, : x.size(1)]
-        h = pack.expert(h.detach(), cos, sin)
-        logits = trunk.logits_from_h(h)
-        loss = F.cross_entropy(logits.view(-1, logits.size(-1)), y.reshape(-1),
-                               ignore_index=-100)
-        opt.zero_grad(set_to_none=True)
-        loss.backward()
-        torch.nn.utils.clip_grad_norm_(pack.expert.parameters(), 1.0)
-        opt.step()
-        if step % 50 == 0 or step == args.steps - 1:
-            log(f"step {step:>5} | lm_loss {loss.item():.3f} | lr {lr:.2e}")
-
-    # ------------------------------------------------------------------ #
-    # 3. router: BCE warm-start, then joint calibration (new head only moves)
-    # ------------------------------------------------------------------ #
     log("[rtr ] pooled features (frozen trunk)...")
     feats = pool_features(trunk, {args.name: t_train, **neg_tensors},
                           args.block, args.per_skill, bs=64, seed=args.seed)
@@ -262,6 +318,8 @@ def main(argv=None) -> None:
     recall = None
     if args.eval_facts and os.path.exists(args.eval_facts):
         held = D.load_facts(args.eval_facts)
+        rng_h = random.Random(123)
+        held = rng_h.sample(held, min(60, len(held)))   # full suite runs in bench_lua
         mixer = SkillMixer(trunk)
         for pk in existing.values():
             mixer.add_pack(pk)
@@ -304,6 +362,9 @@ def main(argv=None) -> None:
     log(f"[done] pack -> {out_path} ({os.path.getsize(out_path) / 1e3:.0f} KB) "
         f"in {time.time() - t0:.0f}s")
     log("[zero-forgetting] trunk.pt + other pack files were never written")
+    for tmp in (state_path, cache_path):
+        if os.path.exists(tmp):
+            os.remove(tmp)
 
 
 if __name__ == "__main__":

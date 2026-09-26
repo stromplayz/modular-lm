@@ -27,8 +27,22 @@ from . import data as D
 from .frozen import TrunkModel, SkillMixer
 from .hub import Hub, DEFAULT_REPO
 from .tokenizer import BPETokenizer
+from .ingest import norm_q
+from .kb_optometry import KB1 as _KB1
+from .kb_optometry2 import KB2 as _KB2
+from .kb_optometry3 import KB3 as _KB3
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def optometry_core_questions() -> set[str]:
+    """Canonical seed-bank questions + the legacy 154-fact bank."""
+    qs = {norm_q(q) for _d, q, _a, _k, _s in (_KB1 + _KB2 + _KB3)}
+    legacy = os.path.join(REPO, "assets", "optometry.txt")
+    if os.path.exists(legacy):
+        for q, _a in D.load_facts(legacy):
+            qs.add(norm_q(q))
+    return qs
 
 
 def log(msg: str) -> None:
@@ -96,7 +110,11 @@ def bench_router(mixer, tok, rng, n_per=30):
     """Routing among co-loaded packs (the real inference condition)."""
     cases: list[tuple[str, str]] = []
     qa_f = D.load_facts(os.path.join(REPO, "assets", "facts.txt"))
-    op_f = D.load_facts(os.path.join(REPO, "assets", "optometry.txt"))
+    op2 = os.path.join(REPO, "assets", "optometry_v2", "optometry_v2_facts.txt")
+    op_f = D.load_facts(op2) if os.path.exists(op2) else D.load_facts(
+        os.path.join(REPO, "assets", "optometry.txt"))
+    gr_f = D.load_facts(os.path.join(REPO, "assets", "grammar", "grammar_facts.txt")) \
+        if os.path.exists(os.path.join(REPO, "assets", "grammar", "grammar_facts.txt")) else []
     for _ in range(n_per):
         op = rng.choice(["+", "-", "x"])
         a, b = rng.randint(2, 9), rng.randint(2, 9)
@@ -110,6 +128,9 @@ def bench_router(mixer, tok, rng, n_per=30):
         kq, _ = rng.choice(D.load_facts(os.path.join(
             REPO, "assets", "knowledge", "wiki_facts.txt")))
         cases.append(("knowledge", f"Wiki Q: {kq}\n"))
+        if gr_f:
+            gq, _ = rng.choice(gr_f)
+            cases.append(("grammar", f"Lang Q: {gq}\n"))
     cases = [(w, p) for w, p in cases if w in mixer.packs]
     ok = 0
     for want, p in cases:
@@ -164,12 +185,63 @@ def main(argv=None) -> None:
         log(f"qa        : {ok:>4}/{n} = {100 * ok / n:5.1f}%")
         log("\n".join(f))
     if "optometry" in mixer.packs:
-        ok, n, f = bench_facts(mixer, tok, D.load_facts(
-            os.path.join(REPO, "assets", "optometry.txt")), "optometry",
-            lead="Eye Q: {q}\n")
-        results["optometry"] = {"ok": ok, "n": n}
-        log(f"optometry : {ok:>4}/{n} = {100 * ok / n:5.1f}%")
-        log("\n".join(f))
+        op2 = os.path.join(REPO, "assets", "optometry_v2", "optometry_v2_facts.txt")
+        op2ev = os.path.join(REPO, "assets", "optometry_v2", "optometry_v2_eval.txt")
+        if os.path.exists(op2):
+            # v2 pack: distinctive 'Eye Q:' surface (v5 heritage) + mixed leads
+            bank_all = D.load_facts(op2)
+            canon = optometry_core_questions()
+            core = [f for f in bank_all
+                    if "(A)" not in f[0] and norm_q(f[0]) in canon]
+            sample = rng.sample(core, min(120, len(core)))
+            ok, n, f = bench_facts(mixer, tok, sample, "optometry",
+                                   lead="Eye Q: {q}\n")
+            results["optometry"] = {"ok": ok, "n": n}
+            log(f"optometry: {ok:>4}/{n} = {100 * ok / n:5.1f}% (CORE exam recall)")
+            log("\n".join(f))
+            # robustness: paraphrase / true-false / cloze surface forms
+            forms = [f for f in bank_all if "(A)" not in f[0]
+                     and norm_q(f[0]) not in canon]
+            fs = rng.sample(forms, min(80, len(forms)))
+            ok2, n2, f2 = bench_facts(mixer, tok, fs, "optometry",
+                                      lead="Eye Q: {q}\n")
+            results["optometry_forms"] = {"ok": ok2, "n": n2}
+            log(f"optometry: {ok2:>4}/{n2} = {100 * ok2 / n2:5.1f}% (para/TF/cloze forms)")
+            if os.path.exists(op2ev):
+                held = D.load_facts(op2ev)
+                hs = rng.sample(held, min(80, len(held)))
+                ok, n, f = bench_facts(mixer, tok, hs, "optometry",
+                                       lead="Eye Q: {q}\n")
+                results["optometry_heldout"] = {"ok": ok, "n": n}
+                log(f"optometry: {ok:>4}/{n} = {100 * ok / n:5.1f}% (held-out)")
+        else:
+            ok, n, f = bench_facts(mixer, tok, D.load_facts(
+                os.path.join(REPO, "assets", "optometry.txt")), "optometry",
+                lead="Eye Q: {q}\n")
+            results["optometry"] = {"ok": ok, "n": n}
+            log(f"optometry: {ok:>4}/{n} = {100 * ok / n:5.1f}%")
+            log("\n".join(f))
+    if "grammar" in mixer.packs:
+        gc = os.path.join(REPO, "assets", "grammar", "grammar_core.txt")
+        gev = os.path.join(REPO, "assets", "grammar", "grammar_eval.txt")
+        if os.path.exists(gc):
+            # core = vocab + rule items (HF correction pairs are measured by
+            # the held-out suite, not exact recall - they are LM richness)
+            bank = [f for f in D.load_facts(gc) if "(A)" not in f[0]]
+            sample = rng.sample(bank, min(100, len(bank)))
+            ok, n, f = bench_facts(mixer, tok, sample, "grammar",
+                                   lead="Lang Q: {q}\n")
+            results["grammar"] = {"ok": ok, "n": n}
+            log(f"grammar   : {ok:>4}/{n} = {100 * ok / n:5.1f}% (bank recall)")
+            log("\n".join(f))
+        if os.path.exists(gev):
+            held = D.load_facts(gev)
+            hs = rng.sample(held, min(80, len(held)))
+            ok, n, f = bench_facts(mixer, tok, hs, "grammar",
+                                   lead="Lang Q: {q}\n")
+            results["grammar_heldout"] = {"ok": ok, "n": n}
+            log(f"grammar   : {ok:>4}/{n} = {100 * ok / n:5.1f}% (held-out)")
+            log("\n".join(f))
     ev_path = os.path.join(REPO, "assets", "knowledge", "wiki_facts_eval.txt")
     tr_path = os.path.join(REPO, "assets", "knowledge", "wiki_facts.txt")
     if "knowledge" in mixer.packs:

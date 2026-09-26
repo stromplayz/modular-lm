@@ -1,0 +1,10 @@
+{
+  "seed_facts": 401,
+  "agents": 50,
+  "optometry_train": 2915,
+  "optometry_eval": 354,
+  "optometry_lm": 401,
+  "grammar_train": 1238,
+  "grammar_eval": 124,
+  "grammar_hf_pairs": 3500
+}

@@ -1,0 +1,124 @@
+Fix this sentence: He go the report carefully. ||| He goes the report carefully.
+Which sentence is correct? (A) He go the data every morning. (B) He goes the data every morning. ||| B
+Fix this sentence: She study the data every morning. ||| She studies the data every morning.
+Which sentence is correct? (A) It work the contract closely. (B) It works the contract closely. ||| B
+Fix this sentence: The doctor write the contract closely. ||| The doctor writes the contract closely.
+Which sentence is correct? (A) The engineer reads the lecture notes. (B) The engineer read the lecture notes. ||| A
+Fix this sentence: The student watch the lecture notes. ||| The student watches the lecture notes.
+Which sentence is correct? (A) My friend finish the results with interest. (B) My friend finishes the results with interest. ||| B
+Fix this sentence: The manager enjoy the results with interest. ||| The manager enjoys the results with interest.
+Which sentence is correct? (A) The professor teaches a novel at night. (B) The professor teach a novel at night. ||| A
+Fix this sentence: The pilot run a novel at night. ||| The pilot runs a novel at night.
+Which sentence is correct? (A) Yesterday he goed the calibration. (B) Yesterday he went the calibration. ||| B
+Fix this sentence: Yesterday he teached the samples. ||| Yesterday he taught the samples.
+Which sentence is correct? (A) Yesterday he maked the lecture. (B) Yesterday he made the lecture. ||| B
+Fix this sentence: Yesterday he drinked across the city. ||| Yesterday he drank across the city.
+Which sentence is correct? (A) This solution is more better than the standard. (B) This solution is better than the standard. ||| B
+Fix this sentence: How much books did you review? ||| How many books did you review?
+Which sentence is correct? (A) How many students did you review? (B) How much students did you review? ||| A
+Fix this sentence: There were much progress in the study. ||| There was much progress in the study.
+Which sentence is correct? (A) The team appreciated your effort. (B) The team appreciated you're effort. ||| A
+Fix this sentence: Its raining again. ||| It's raining again.
+Which sentence is correct? (A) She finished the exam, than she reviewed it. (B) She finished the exam, then she reviewed it. ||| B
+Fix this sentence: Between you and I, the plan needs work. ||| Between you and me, the plan needs work.
+Which sentence is correct? (A) The clinic opens in Friday afternoon. (B) The clinic opens on Friday afternoon. ||| B
+Fix this sentence: She sings beautiful at recitals. ||| She sings beautifully at recitals.
+Which sentence is correct? (A) I have practiced for two years. (B) I have practiced since two years. ||| A
+What does 'aberration' mean? ||| a deviation from what is normal or expected
+Which word means 'an award or expression of praise'? (A) pugnacious (B) diligent (C) audacious (D) accolade ||| D
+Which word means 'something added that is of secondary importance'? ||| adjunct
+What is a synonym for 'ameliorate'? ||| improve
+What does 'antipathy' mean? ||| a deep-seated feeling of aversion
+Which word means 'requiring great effort'? (A) arduous (B) utilitarian (C) sanction (D) disdain ||| A
+Which word means 'severe or plain in manner'? ||| austere
+What is a synonym for 'belabor'? ||| overdo
+What does 'brevity' mean? ||| concise expression; shortness of speech
+Which word means 'a harsh discordant mixture of sounds'? (A) gratuitous (B) cacophony (C) fortuitous (D) preempt ||| B
+Which word means 'cautious about possible consequences'? ||| circumspect
+What is a synonym for 'cogent'? ||| compelling
+What does 'complacent' mean? ||| self-satisfied to the point of neglect
+Which word means 'to merge two things into one'? (A) hackneyed (B) torpid (C) conflate (D) pragmatic ||| C
+Which word means 'clearly visible or attracting notice'? ||| conspicuous
+What is a synonym for 'corroborate'? ||| verify
+What does 'cultivate' mean? ||| to foster the growth of something
+Which word means 'to weaken severely'? (A) credulous (B) debilitate (C) refute (D) novice ||| B
+Which word means 'causing harm or damage'? ||| deleterious
+What is a synonym for 'denigrate'? ||| disparage
+What does 'desiccate' mean? ||| to remove moisture from
+Which word means 'something that discourages an action'? (A) accolade (B) exhaustive (C) profound (D) deterrent ||| D
+Which word means 'intended to teach'? ||| didactic
+What is a synonym for 'discord'? ||| strife
+What does 'disparate' mean? ||| essentially different in kind
+Which word means 'asserting opinions as undeniably true'? (A) substantiate (B) clandestine (C) dogmatic (D) wary ||| C
+Which word means 'to instruct or improve morally'? ||| edify
+What is a synonym for 'egregious'? ||| flagrant
+What does 'enervate' mean? ||| to drain of energy
+Which word means 'lasting a very short time'? (A) exonerate (B) ephemeral (C) scrupulous (D) placate ||| B
+Which word means 'open to more than one interpretation'? ||| equivocal
+What is a synonym for 'eulogy'? ||| tribute
+What does 'exhaustive' mean? ||| covering all possibilities
+Which word means 'to make a process happen sooner'? (A) presume (B) acquiesce (C) vindicate (D) expedite ||| D
+Which word means 'to free from a difficulty'? ||| extricate
+What is a synonym for 'fathom'? ||| comprehend
+What does 'flagrant' mean? ||| conspicuously offensive
+Which word means 'sparing with money or resources'? (A) quixotic (B) obdurate (C) frugal (D) relegate ||| C
+Which word means 'relevant to the subject'? ||| germane
+What is a synonym for 'gregarious'? ||| sociable
+What does 'harbinger' mean? ||| a sign of what is to come
+Which word means 'enabling discovery through trial and error'? (A) insipid (B) contrite (C) pedantic (D) heuristic ||| D
+Which word means 'to delay or prevent progress'? ||| impede
+What is a synonym for 'implicit'? ||| implied
+What does 'incisive' mean? ||| impressively sharp and clear in thought
+Which word means 'not able to be reformed'? (A) incorrigible (B) vindicate (C) complacent (D) circumspect ||| A
+Which word means 'too great to be expressed in words'? ||| ineffable
+What is a synonym for 'insidious'? ||| treacherous
+What does 'inundate' mean? ||| to overwhelm with a flood of things
+Which word means 'to place close together for contrast'? (A) laconic (B) tireless (C) juxtapose (D) benevolent ||| C
+Which word means 'deserving praise'? ||| laudable
+What is a synonym for 'malevolent'? ||| malicious
+What does 'mitigate' mean? ||| to make less severe
+Which word means 'lacking interest or excitement'? (A) gregarious (B) cultivate (C) castigate (D) mundane ||| D
+Which word means 'to nullify or deny'? ||| negate
+What is a synonym for 'novice'? ||| apprentice
+What does 'obfuscate' mean? ||| to make something unclear
+Which word means 'noticeably prominent in an unwelcome way'? (A) delineate (B) ostracize (C) obtrusive (D) nefarious ||| C
+Which word means 'ostentatiously rich'? ||| opulent
+What is a synonym for 'panacea'? ||| remedy
+What does 'pedantic' mean? ||| excessively concerned with minor rules
+Which word means 'extremely poor or stingy'? (A) quandary (B) penurious (C) penchant (D) erudite ||| B
+Which word means 'done without real interest'? ||| perfunctory
+What is a synonym for 'petulant'? ||| peevish
+What does 'platitude' mean? ||| a flat trite remark
+Which word means 'evoking keen sad emotion'? (A) poignant (B) mundane (C) saturate (D) alacrity ||| A
+Which word means 'to cause something suddenly'? ||| precipitate
+What is a synonym for 'predilection'? ||| partiality
+What does 'prerogative' mean? ||| an exclusive right or privilege
+Which word means 'to suppose something is true'? (A) connoisseur (B) ephemeral (C) presume (D) notorious ||| C
+Which word means 'enormous in size or degree'? ||| prodigious
+What is a synonym for 'profound'? ||| deep
+What does 'proponents' mean? ||| people who argue in favor of something
+Which word means 'dull and unimaginative'? (A) ineffable (B) eclectic (C) prosaic (D) unctuous ||| C
+Which word means 'showing care for the future'? ||| prudent
+What is a synonym for 'quell'? ||| suppress
+What does 'rancor' mean? ||| bitter resentment
+Which word means 'a person who lives in solitude'? (A) haphazard (B) precarious (C) recluse (D) harbinger ||| C
+Which word means 'to prove a claim wrong'? ||| refute
+What is a synonym for 'remuneration'? ||| compensation
+What does 'reprehensible' mean? ||| deserving condemnation
+Which word means 'firm and unwavering in purpose'? (A) connoisseur (B) impede (C) flagrant (D) resolute ||| D
+Which word means 'most noticeable or important'? ||| salient
+What is a synonym for 'saturate'? ||| drench
+What does 'serendipity' mean? ||| a fortunate accidental discovery
+Which word means 'comfort in distress'? (A) solace (B) remuneration (C) profound (D) fortuitous ||| A
+Which word means 'outstandingly excellent'? ||| stellar
+What is a synonym for 'subtle'? ||| nuanced
+What does 'tenacious' mean? ||| holding firmly to a course
+Which word means 'very weak or slight'? (A) tenuous (B) anachronism (C) sardonic (D) impede ||| A
+Which word means 'lasting only a short time'? ||| transient
+What is a synonym for 'ubiquitous'? ||| omnipresent
+What does 'uniform' mean? ||| remaining the same in all cases
+Which word means 'suave and refined in manner'? (A) austere (B) haphazard (C) lambast (D) urbane ||| D
+Which word means 'conformity to facts'? ||| veracity
+What is a synonym for 'viable'? ||| feasible
+What does 'voracious' mean? ||| having a huge appetite for something
+Which word means 'cautious about danger'? (A) wary (B) impetuous (C) desiccate (D) decry ||| A

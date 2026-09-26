@@ -1,0 +1,272 @@
+# Advanced vocabulary bank for the grammar/language pack.
+# Format: word|pos|gloss|synonym
+abate|verb|to lessen in intensity|subside
+aberration|noun|a deviation from what is normal or expected|anomaly
+abstruse|adjective|difficult to understand|obscure
+accolade|noun|an award or expression of praise|honor
+acquiesce|verb|to accept or comply reluctantly|consent
+adjudicate|verb|to judge or settle a dispute|arbitrate
+adjunct|noun|something added that is of secondary importance|addition
+affinity|noun|a natural attraction or liking|rapport
+alacrity|noun|brisk and cheerful readiness|eagerness
+ameliorate|verb|to make a bad situation better|improve
+anachronism|noun|something out of its historical time|misplacement
+anomalous|adjective|deviating from the common order|irregular
+antipathy|noun|a deep-seated feeling of aversion|hostility
+aplomb|noun|self-confident assurance|composure
+arduous|adjective|requiring great effort|strenuous
+assiduous|adjective|showing persistent careful attention|diligent
+audacious|adjective|boldly daring|intrepid
+austere|adjective|severe or plain in manner|stern
+avarice|noun|extreme greed for wealth|cupidity
+banal|adjective|lacking originality|trite
+belabor|verb|to argue or elaborate at excessive length|overdo
+belie|verb|to give a false impression of|contradict
+benevolent|adjective|kind and charitable|kindly
+brevity|noun|concise expression; shortness of speech|conciseness
+burgeon|verb|to grow or expand rapidly|flourish
+cacophony|noun|a harsh discordant mixture of sounds|din
+capricious|adjective|given to sudden changes of mood or behavior|fickle
+castigate|verb|to reprimand severely|reprove
+circumspect|adjective|cautious about possible consequences|wary
+clandestine|adjective|kept secret because illicit|covert
+coalesce|verb|to come together to form one mass|merge
+cogent|adjective|clear and convincing in argument|compelling
+colloquial|adjective|characteristic of informal speech|conversational
+commensurate|adjective|corresponding in size or degree|proportionate
+complacent|adjective|self-satisfied to the point of neglect|smug
+conciliatory|adjective|intended to placate or win over|appeasing
+conflate|verb|to merge two things into one|combine
+conjecture|noun|an opinion formed on incomplete evidence|speculation
+connoisseur|noun|an expert judge of quality in a field|expert
+conspicuous|adjective|clearly visible or attracting notice|obvious
+contrite|adjective|feeling remorse for wrongdoing|repentant
+copious|adjective|abundant in supply or quantity|plentiful
+corroborate|verb|to confirm with additional evidence|verify
+credulous|adjective|too ready to believe things|gullible
+cryptic|adjective|mysterious in meaning|enigmatic
+cultivate|verb|to foster the growth of something|foster
+dearth|noun|a scarcity or lack of something|shortage
+debilitate|verb|to weaken severely|enfeeble
+decry|verb|to publicly denounce|condemn
+deference|noun|polite submission and respect|respect
+deleterious|adjective|causing harm or damage|harmful
+delineate|verb|to describe or outline precisely|sketch
+demur|verb|to raise objections reluctantly|object
+denigrate|verb|to criticize unfairly|disparage
+deprecate|verb|to express disapproval of|disapprove
+derision|noun|contemptuous ridicule|mockery
+desiccate|verb|to remove moisture from|dehydrate
+desultory|adjective|lacking a plan or purpose|aimless
+deterrent|noun|something that discourages an action|obstacle
+deviate|verb|to depart from an accepted standard|diverge
+diatribe|noun|a forceful bitter verbal attack|tirade
+didactic|adjective|intended to teach|instructive
+diffident|adjective|shy and lacking self-confidence|bashful
+diligent|adjective|showing steady careful effort|industrious
+discord|noun|lack of agreement between people or things|strife
+discrepancy|noun|a difference between things that should match|inconsistency
+disdain|noun|the feeling that something is unworthy|contempt
+disparate|adjective|essentially different in kind|unalike
+docile|adjective|submissive and easy to manage|tractable
+dogmatic|adjective|asserting opinions as undeniably true|opinionated
+ebullient|adjective|cheerful and full of energy|exuberant
+eclectic|adjective|drawing ideas from diverse sources|varied
+edify|verb|to instruct or improve morally|enlighten
+efficacy|noun|the ability to produce a desired result|effectiveness
+effluent|noun|liquid waste discharged into a river|discharge
+egregious|adjective|outstandingly bad|flagrant
+elucidate|verb|to make something clear|clarify
+emulate|verb|to match or surpass by imitation|imitate
+enervate|verb|to drain of energy|weaken
+enigmatic|adjective|difficult to interpret|puzzling
+ephemeral|adjective|lasting a very short time|fleeting
+epitome|noun|a perfect example of a quality|embodiment
+equanimity|noun|calmness under stress|composure
+equivocal|adjective|open to more than one interpretation|ambiguous
+erudite|adjective|showing great learning|scholarly
+esoteric|adjective|intended for a small knowledgeable circle|arcane
+eulogy|noun|a speech praising someone who has died|tribute
+exacerbate|verb|to make a problem worse|aggravate
+exemplary|adjective|serving as a desirable model|commendable
+exhaustive|adjective|covering all possibilities|thorough
+exonerate|verb|to clear of blame|absolve
+expedite|verb|to make a process happen sooner|hasten
+explicit|adjective|stated clearly and in detail|unequivocal
+extraneous|adjective|irrelevant or unrelated|superfluous
+extricate|verb|to free from a difficulty|disentangle
+facetious|adjective|treating serious issues playfully|flippant
+fallacy|noun|a mistaken belief or unsound argument|misconception
+fathom|verb|to understand a difficult thing|comprehend
+feasible|adjective|possible to do easily|viable
+fervent|adjective|displaying passionate intensity|passionate
+flagrant|adjective|conspicuously offensive|blatant
+fortuitous|adjective|happening by lucky chance|accidental
+frugal|adjective|sparing with money or resources|thrifty
+futile|adjective|incapable of producing a useful result|pointless
+garrulous|adjective|excessively talkative|loquacious
+germane|adjective|relevant to the subject|pertinent
+grandiose|adjective|impressively large or ambitious|ostentatious
+gratuitous|adjective|uncalled for or unwarranted|needless
+gregarious|adjective|sociable and fond of company|sociable
+hackneyed|adjective|overused and unoriginal|cliche
+haphazard|adjective|lacking any plan or order|random
+harbinger|noun|a sign of what is to come|omen
+haughty|adjective|arrogantly superior|arrogant
+heuristic|adjective|enabling discovery through trial and error|pragmatic
+hierarchy|noun|a system ranking groups above one another|pyramid
+iconoclast|noun|a person who attacks established beliefs|rebel
+impede|verb|to delay or prevent progress|hinder
+imperceptible|adjective|too slight to be noticed|faint
+impetuous|adjective|acting quickly without thought|rash
+implicit|adjective|suggested without being stated directly|implied
+impugn|verb|to dispute the truth or integrity of|challenge
+inadvertent|adjective|unintentional|accidental
+incisive|adjective|impressively sharp and clear in thought|penetrating
+incongruous|adjective|out of place or incompatible|mismatched
+incorrigible|adjective|not able to be reformed|inveterate
+indifferent|adjective|having no interest or concern|unconcerned
+indolent|adjective|wanting to avoid activity|lazy
+ineffable|adjective|too great to be expressed in words|indescribable
+inexorable|adjective|impossible to stop or prevent|relentless
+innocuous|adjective|not harmful or offensive|harmless
+insidious|adjective|proceeding harmfully in a subtle way|treacherous
+insipid|adjective|lacking flavor or vigor|bland
+intransigent|adjective|refusing to change one's views|uncompromising
+inundate|verb|to overwhelm with a flood of things|deluge
+inveterate|adjective|having a long-standing habit|habitual
+juxtapose|verb|to place close together for contrast|adjacent
+laconic|adjective|using very few words|terse
+lambast|verb|to criticize harshly|berate
+laudable|adjective|deserving praise|commendable
+lucid|adjective|clear and easy to understand|coherent
+magnanimous|adjective|generous toward a rival|forgiving
+malevolent|adjective|wishing harm to others|malicious
+maudlin|adjective|self-pityingly sentimental|mawkish
+meticulous|adjective|showing great attention to detail|painstaking
+mitigate|verb|to make less severe|alleviate
+mollify|verb|to soothe the anger of someone|appease
+mundane|adjective|lacking interest or excitement|ordinary
+nebulous|adjective|vague or ill-defined|hazy
+nefarious|adjective|wicked or criminal|villainous
+negate|verb|to nullify or deny|invalidate
+nominal|adjective|existing in name only|titular
+notorious|adjective|famous for something bad|infamous
+novice|noun|a beginner in an activity|apprentice
+nuance|noun|a subtle difference in meaning|subtlety
+obdurate|adjective|stubbornly refusing to change|hardened
+obfuscate|verb|to make something unclear|confuse
+obsolete|adjective|no longer in use|outdated
+obtrusive|adjective|noticeably prominent in an unwelcome way|intrusive
+ominous|adjective|giving a worrying sign of the future|foreboding
+onerous|adjective|burdensome and difficult|oppressive
+opulent|adjective|ostentatiously rich|lavish
+ostensible|adjective|apparent but perhaps not actual|seeming
+ostracize|verb|to exclude from a group|shun
+panacea|noun|a cure for all problems|remedy
+paradigm|noun|a typical model or pattern|framework
+paragon|noun|a model of excellence|exemplar
+pedantic|adjective|excessively concerned with minor rules|nitpicky
+penchant|noun|a strong inclination or liking|leaning
+penurious|adjective|extremely poor or stingy|impecunious
+perennial|adjective|lasting through many years|enduring
+perfidious|adjective|deceitful and untrustworthy|treacherous
+perfunctory|adjective|done without real interest|cursory
+pernicious|adjective|harmful in a gradual way|destructive
+pertinent|adjective|relevant to the matter at hand|apposite
+petulant|adjective|childishly sulky or bad-tempered|peevish
+phenomenon|noun|an observable fact or event|occurrence
+placate|verb|to pacify someone who is angry|appease
+platitude|noun|a flat trite remark|cliche
+plethora|noun|an excess or overabundance|excess
+poignant|adjective|evoking keen sad emotion|touching
+pragmatic|adjective|dealing with things sensibly|practical
+precarious|adjective|not securely held in place|risky
+precipitate|verb|to cause something suddenly|trigger
+preclude|verb|to prevent from happening|forestall
+precocious|adjective|unusually advanced in development|forward
+predilection|noun|a preference for something|partiality
+preempt|verb|to take action before another|forestall
+premise|noun|a statement an argument is based on|assumption
+prerogative|noun|an exclusive right or privilege|entitlement
+prescient|adjective|showing knowledge of events before they happen|farsighted
+presume|verb|to suppose something is true|assume
+prevalent|adjective|widespread in a particular area|common
+prodigal|adjective|wastefully extravagant|profligate
+prodigious|adjective|enormous in size or degree|colossal
+proficient|adjective|competent and skilled|adept
+profligate|adjective|recklessly extravagant|wasteful
+profound|adjective|showing great insight|deep
+prolific|adjective|producing many works|fruitful
+promulgate|verb|to make widely known|proclaim
+proponents|noun|people who argue in favor of something|supporters
+propitious|adjective|giving a good chance of success|favorable
+prosaic|adjective|dull and unimaginative|pedestrian
+providence|noun|protective care of nature or God|foresight
+provisional|adjective|arranged for the present temporarily|tentative
+prudent|adjective|showing care for the future|judicious
+pugnacious|adjective|eager to argue or fight|belligerent
+quandary|noun|a state of uncertainty|dilemma
+quell|verb|to put an end to by force|suppress
+quiescent|adjective|temporarily inactive|dormant
+quixotic|adjective|idealistic and impractical|romantic
+rancor|noun|bitter resentment|animosity
+recant|verb|to withdraw a statement as erroneous|retract
+recluse|noun|a person who lives in solitude|hermit
+recompense|verb|to make amends or repay|compensate
+rectify|verb|to put something right|correct
+refute|verb|to prove a claim wrong|disprove
+relegate|verb|to consign to a lower rank|demote
+remiss|adjective|negligent in duties|careless
+remuneration|noun|payment for work|compensation
+renegade|noun|a person who deserts a cause|defector
+reprieve|noun|a cancellation or postponement of a punishment|stay
+reprehensible|adjective|deserving condemnation|deplorable
+rescind|verb|to revoke or cancel formally|revoke
+resolute|adjective|firm and unwavering in purpose|steadfast
+reticent|adjective|reluctant to reveal thoughts|reserved
+ribald|adjective|vulgar and humorous in speech|bawdy
+salient|adjective|most noticeable or important|prominent
+sanction|noun|official permission or penalty|approval
+sardonic|adjective|grimly mocking|derisive
+saturate|verb|to soak completely|drench
+schism|noun|a split within an organization|rift
+scrupulous|adjective|very careful about doing right|conscientious
+serendipity|noun|a fortunate accidental discovery|luck
+skeptic|noun|a person who doubts accepted beliefs|doubter
+solace|noun|comfort in distress|consolation
+spurious|adjective|not genuine or valid|bogus
+static|adjective|lacking movement or change|motionless
+stellar|adjective|outstandingly excellent|exceptional
+stringent|adjective|strict and demanding|rigorous
+substantiate|verb|to support a claim with evidence|confirm
+subtle|adjective|delicately complex and understated|nuanced
+superfluous|adjective|more than is needed|surplus
+taciturn|adjective|quiet and disinclined to talk|reserved
+tenacious|adjective|holding firmly to a course|persistent
+tentative|adjective|not certain or fixed|provisional
+tenuous|adjective|very weak or slight|flimsy
+tireless|adjective|working with unflagging energy|indefatigable
+torpid|adjective|mentally or physically sluggish|lethargic
+transient|adjective|lasting only a short time|temporary
+trepidation|noun|a feeling of fear about something to come|apprehension
+turbid|adjective|cloudy and murky|muddy
+ubiquitous|adjective|present everywhere|omnipresent
+umbrage|noun|offense or annoyance|resentment
+unctuous|adjective|excessively flattering|smarmy
+uniform|adjective|remaining the same in all cases|consistent
+untenable|adjective|indefensible or unsustainable|unsound
+urbane|adjective|suave and refined in manner|cosmopolitan
+utilitarian|adjective|designed to be useful rather than beautiful|functional
+venerate|verb|to respect deeply|revere
+veracity|noun|conformity to facts|truthfulness
+verbose|adjective|using more words than needed|wordy
+vexation|noun|the state of being annoyed|irritation
+viable|adjective|capable of working successfully|feasible
+vindicate|verb|to clear of criticism or blame|justify
+visceral|adjective|relating to deep instinctive feeling|instinctive
+voracious|adjective|having a huge appetite for something|ravenous
+wane|verb|to decrease gradually in size or intensity|diminish
+wary|adjective|cautious about danger|vigilant
+whimsical|adjective|playfully quaint or fanciful|capricious
+zealous|adjective|showing great energy for a cause|passionate

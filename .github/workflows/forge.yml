@@ -1,0 +1,100 @@
+name: dataset-forge
+# 50 parallel GitHub Actions agents: each matrix job expands its shard of the
+# optometry knowledge base, artifacts merge, packs train, LUA bench runs,
+# and the hub (packs/ + assets/) is committed back to main.
+
+on:
+  workflow_dispatch:
+    inputs:
+      train_packs:
+        description: 'train optometry + grammar packs after merge'
+        type: boolean
+        default: true
+
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        agent: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+                19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
+                35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: install torch (cpu)
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: agent ${{ matrix.agent }} expands its shard
+        run: |
+          python -m skill_lm.forge --agents 50 \
+            --shard ${{ matrix.agent }} --num-shards 50 \
+            --shard-out shard_${{ matrix.agent }}.json
+      - name: upload shard artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.agent }}
+          path: shard_${{ matrix.agent }}.json
+
+  merge:
+    needs: shard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: install torch (cpu)
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: download all 50 shard artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: shards
+          merge-multiple: true
+      - name: fetch real grammar corpus from HF (datasets-server pages)
+        run: |
+          python -m skill_lm.hfdata --dataset liweili/c4_200m --split train \
+            --n 3500 --in-field input --out-field output \
+            --out assets/grammar/c4_pairs.txt
+      - name: merge 50 agents into training banks
+        run: |
+          python -m skill_lm.forge --agents 50 --merge-glob 'shards/shard_*.json'
+      - name: train packs against the FROZEN trunk
+        if: ${{ inputs.train_packs }}
+        run: |
+          python -m skill_lm.train_pack --name optometry \
+            --facts assets/optometry_v2/optometry_v2_facts.txt \
+            --eval-facts assets/optometry_v2/optometry_v2_eval.txt \
+            --extra-corpus assets/optometry_v2/optometry_v2_lm.txt \
+            --steps 9000 --max-minutes 35 --n-examples 60000 \
+            --calib-epochs 800 --mtp 0.15 \
+            --lead 'Eye Q: {q}\nA: {a}.'
+          python -m skill_lm.train_pack --name grammar \
+            --facts assets/grammar/grammar_facts.txt \
+            --eval-facts assets/grammar/grammar_eval.txt \
+            --extra-corpus assets/grammar/grammar_lm.txt \
+            --steps 8000 --max-minutes 30 --n-examples 26000 \
+            --calib-epochs 800 --mtp 0.15 \
+            --lead 'Lang Q: {q}\nA: {a}.'
+      - name: int8 export + LUA benchmark (write baseline)
+        if: ${{ inputs.train_packs }}
+        run: |
+          python -m skill_lm.export_pack --pack optometry
+          python -m skill_lm.export_pack --pack grammar
+          python -m skill_lm.bench_lua --write-baseline
+      - name: commit banks + packs back to the hub
+        if: ${{ inputs.train_packs }}
+        run: |
+          git config user.name "forge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/optometry_v2 assets/grammar
+          git add -f packs/optometry.pack packs/grammar.pack \
+                    packs/optometry.pack.q8 packs/grammar.pack.q8 \
+                    ckpt/bench_lua.json
+          git commit -m "forge: 50-agent dataset + pack retrain (Actions run ${{ github.run_id }})" || echo "nothing to commit"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && break || sleep 10
+          done
