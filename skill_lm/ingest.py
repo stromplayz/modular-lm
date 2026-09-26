@@ -124,7 +124,8 @@ _BAD_Q = re.compile(r"\b(this|these|those|it|he|she|they|also|however|there)\b",
 # reject junk SUBJECTS: pronoun openers, clauses impersonating entities
 _BAD_X = re.compile(
     r"^(There|This|That|These|Those|It|He|She|They|Its|It's|However|Although|"
-    r"Some|Most|Many|While|When|After|Before|During|Today|Currently|Originally)\b", re.I)
+    r"Some|Most|Many|While|When|After|Before|During|Today|Currently|Originally|"
+    r"Of|In|On|At|For|With|By|From|As|According)\b", re.I)
 # answers must be concise, no trailing clauses
 _BAD_Y = re.compile(r"\b(that|which|where|who)\b", re.I)
 
@@ -161,6 +162,11 @@ def mine_facts(text: str) -> list[tuple[str, str, str]]:
                 if len(a.split()) > 10 or _BAD_Y.search(a):
                     continue
                 if _BAD_X.search(sent):   # pronoun/clause openers never make subjects
+                    continue
+                # subject sanity: short, no embedded clauses ("X suggests that Y is...")
+                subj = re.sub(r"^(What is|Where is) ", "", q)
+                subj = re.sub(r"\?$", "", subj)
+                if len(subj.split()) > 8 or " that " in f" {subj} ":
                     continue
                 if _BAD_Q.search(q.split("?", 1)[0].split()[-1] if q else ""):
                     continue
